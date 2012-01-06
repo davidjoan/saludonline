@@ -1,0 +1,161 @@
+Doctor:
+  Doctor_1:
+    Hospitals:               [ Hospital_4, Hospital_2 ]
+    Specialty:               Specialty_53
+    firstname:               'Flor'
+    lastname:                'Mendoza Ramos'
+    gender:                  'F'
+    email:                   'romident@hotmail.com'
+    username:                romident
+    password:                abcd
+    home_phone:              '3926855'
+      
+Patient:
+  Patient_1:
+    realname: 'David Joan Tataje Mendoza'
+    username: davidjoan
+    password: abcd
+    email: dtataje@datasolutions.pe
+    phone: null
+    active: '0'
+    
+Company:
+  Company_1:
+    name: 'Salud Online'
+    description: 'Salud Online es una plataforma donde podras guardar tu información medica y compartirla con los centros medicos y hospitales.'
+    address: 'Mz I2 lote 2 JCM'
+    image: 'logo_jpg_25439.jpg'
+    phones: '3926855'
+    fax: '3926855'
+    mobile_phone: '997280378'
+    mail: contact@datasolutions.pe
+    box: null
+    message: 'Hola te damos la mas cordial bienvenida a la plataforma de Salud Online, este servicio es completamente gratuito, esperamos que lo aprobeches al maximo.'
+    active: '1'
+User:
+  User_1:
+    realname: 'David Tataje'
+    username: admin
+    password: 'abcd'
+    email: dtataje@datasolutions.pe
+    url: datasolutions.pe
+    twitter_username: datasolutionspe
+    phone: null
+    active: '1'
+    last_access_at: '2011-09-28 13:11:32'
+    slug: david_tataje
+Category:
+  Category_1:
+    name: Salud
+    slug: salud
+  Category_2:
+    name: Recetas
+    slug: recetas
+  Category_3:
+    name: Medicinas
+    slug: medicinas
+  Category_4:
+    name: Hospitales
+    slug: hospitales
+    
+Comment:
+  Comment_1:
+    Post: Post_1
+    author_name: 'David Joan'
+    author_email: new.skin007@gmail.com
+    author_url: 'HTTP://datasolutions.pe'
+    author_twitter_username: davidjoan
+    author_ip: 127.0.0.1
+    content: "Buen trabajo"
+    datetime: '2011-09-29 11:08:37'
+    agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0.2) Gecko/20100101 Firefox/6.0.2'
+    approved: '1'
+  Comment_2:
+    Post: Post_1
+    author_name: Nelly
+    author_email: nelly.pvg@gmail.com
+    author_url: null
+    author_twitter_username: davidjoan
+    author_ip: 127.0.0.1
+    content: "Felicitaciones"
+    datetime: '2011-09-29 11:08:57'
+    agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0.2) Gecko/20100101 Firefox/6.0.2'
+    approved: '1'
+  Comment_3:
+    Post: Post_2
+    author_name: 'David Joan'
+    author_email: nelly.pvg@gmail.com
+    author_url: 'http://datasolutions.pe'
+    author_twitter_username: jajajaj
+    author_ip: 127.0.0.1
+    content: 'muy buen trabajo'
+    datetime: '2011-09-29 12:34:30'
+    agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0.2) Gecko/20100101 Firefox/6.0.2'
+    approved: '1'
+    
+Post:
+  Post_1:
+    User: User_1
+    title: 'Bienvenidos a Salud Online'
+    content: "<p>Data Solutions is a free, W3C-compliant, CSS-based website template by styleshout.com. This work is distributed under the Creative Commons Attribution 2.5 License, which means that you are free to use and modify it for any purpose. All I ask is that you give me credit by including a link back to my website.</p>\r\n<pre>[php]if($a &gt; $b)\r\n(\r\necho $a;\r\n)\r\nelse\r\n{\r\necho $b;\r\n}[/php]\r\n</pre>\r\n<p>&nbsp;</p>\r\n<pre>[sql]select * from cab_acta_muni_dist;[/sql]\r\n</pre>\r\n<p>You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.net CoolBlue is a free, W3C-compliant, CSS-based website template by  styleshout.com. This work is distributed under the Creative Commons  Attribution 2.5 License, which means that you are free to use and modify  it for any purpose. All I ask is that you give me credit by including a  link back to my website.<br />You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.netYou can find more of my free template designs at my website. For premium  commercial designs, you can check out Themeforest.net CoolBlue is a  free, W3C-compliant, CSS-based website template by  styleshout.com. This  work is distributed under the Creative Commons  Attribution 2.5  License, which means that you are free to use and modify  it for any  purpose. All I ask is that you give me credit by including a  link back  to my website.<br />You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.net.</p>\r\n<p>&nbsp;</p>"
+    excerpt: "Data Solutions is a free, W3C-compliant, CSS-based website template by styleshout.com. This work is distributed under the Creative Commons Attribution 2.5 License, which means that you are free to use and modify it for any purpose. All I ask is that you give me credit by including a link back to my website.\r\n[php]if($a &gt; $b)\r\n(\r\necho $a;\r\n)\r\nelse\r\n{\r\necho $b;\r\n}[/php]\r\n\r\n&nbsp;\r\n[sql]select * from cab_acta_muni_dist;[/sql]\r\n\r\nYou can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.net CoolBlue is a free, W3C-compliant, CSS-based website template by  styleshout.com. This work is distributed under the Creative Commons  Attribution 2.5 License, which means that you are free to use and modify  it for any purpose. All I ask is that you give me credit by including a  link back to my website.You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.netYou can ..."
+    meta_description: 'bienvenidos a salud online'
+    meta_keywords: 'salud, online, demo'
+    datetime: '2011-09-28 17:06:45'
+    status: PU
+  Post_2:
+    User: User_1
+    title: 'Enfermeades Crónicas entre las principales causas de muerte en Essalud'
+    image: enfermedades_cronicas_jpg_54717.jpg
+    content: '<p style="text-align: justify;">El c&aacute;ncer y las enfermedades card&iacute;acas se encuentran entre las principales causas de muerte entre los asegurados de EsSalud, por lo que esta instituci&oacute;n est&aacute; implementando una intensa pol&iacute;tica de salud que prioriza la prevenci&oacute;n de la enfermedad y la promoci&oacute;n de la salud.<br /><br />Estas enfermedades son consideradas cr&oacute;nicas no transmisibles debido a que el afectado las va a padecer durante toda su vida y no son contra&iacute;das por contagio con otra persona.<br /><br />Para dar a conocer esta problem&aacute;tica, el presidente ejecutivo de EsSalud, doctor &Aacute;lvaro Vidal Rivadeneyra, fue invitado por el Banco Interamericano de Desarrollo (BID), a participar en la Conferencia Mundial de Salud 2011, que se realiza en Londres, Inglaterra, hasta el viernes 30 de setiembre. La cita tiene la presencia de destacados especialistas en temas de salud de todo el mundo.<br /><br />Durante esta visita de trabajo, la cual no representa gasto alguno a la instituci&oacute;n y es autorizada mediante Resoluci&oacute;n Ministerial N&deg;278-2011-TR, el doctor Vidal Rivadeneyra presentar&aacute; un informe sobre la situaci&oacute;n de la salud en el Per&uacute; y en particular en el Seguro Social de Salud, con la finalidad de recibir el apoyo del BID y concretar proyectos para la mejora de la salud de los asegurados.<br /><br />Entre estos prop&oacute;sitos, se encuentra la posible firma de un Convenio Marco de Cooperaci&oacute;n Internacional con el National Institute for Health and Clinical Excellence (NICE).<br /><br />El acuerdo contempla la elaboraci&oacute;n de Gu&iacute;as de Pr&aacute;ctica Cl&iacute;nica de enfermedades cr&oacute;nicas, basadas en evidencias; el dise&ntilde;o e implementaci&oacute;n de un sistema de vigilancia de determinantes sociales de la salud, asociados a enfermedades cr&oacute;nicas y la incorporaci&oacute;n a esfuerzos mundiales para mejorar el sistema de informaci&oacute;n en salud.<br /><br />NICE es una instituci&oacute;n que provee gu&iacute;as cl&iacute;nicas, define est&aacute;ndares de calidad y gestiona una base de datos nacional para mejorar la salud de las personas, as&iacute; como prevenir y tratar las enfermedades. Su trabajo se divide en 3 &aacute;reas: Salud P&uacute;blica, Pr&aacute;ctica Cl&iacute;nica y Tecnolog&iacute;as en Salud. Adem&aacute;s, brinda recomendaciones al Sistema Nacional de Salud (NHS) del Reino Unido sobre nuevos medicamentos y los ya existentes, tratamientos y procedimientos, manejo y cuidado de personas con enfermedades y cuidados espec&iacute;ficos, como es el caso de los afectados por enfermedades cr&oacute;nicas no transmisibles.</p>'
+    excerpt: 'El c&aacute;ncer y las enfermedades card&iacute;acas se encuentran entre las principales causas de muerte entre los asegurados de EsSalud, por lo que esta instituci&oacute;n est&aacute; implementando una intensa pol&iacute;tica de salud que prioriza la prevenci&oacute;n de la enfermedad y la promoci&oacute;n de la salud.Estas enfermedades son consideradas cr&oacute;nicas no transmisibles debido a que el afectado las va a padecer durante toda su vida y no son contra&iacute;das por contagio con otra persona.Para dar a conocer esta problem&aacute;tica, el presidente ejecutivo de EsSalud, doctor &Aacute;lvaro Vidal Rivadeneyra, fue invitado por el Banco Interamericano de Desarrollo (BID), a participar en la Conferencia Mundial de Salud 2011, que se realiza en Londres, Inglaterra, hasta el viernes 30 de setiembre. La cita tiene la presencia de destacados especialistas en temas de salud de todo el mundo.Durante esta visita de trabajo, la cual no representa gasto alguno a la instituci&oacute;...'
+    meta_description: 'ENFERMEDADES CRÓNICAS ENTRE LAS PRINCIPALES CAUSAS DE MUERTE EN ESSALUD'
+    meta_keywords: 'enfermedades, salud, essalud,hospital'
+    datetime: '2011-09-29 11:33:35'
+    status: PU
+PostCategory:
+  PostCategory_1_1:
+    Post: Post_1
+    Category: Category_1
+  PostCategory_1_2:
+    Post: Post_1
+    Category: Category_2
+  PostCategory_1_3:
+    Post: Post_1
+    Category: Category_3
+  PostCategory_2_1:
+    Post: Post_2
+    Category: Category_1
+  PostCategory_2_3:
+    Post: Post_2
+    Category: Category_3
+PostIndex:
+  PostIndex_1:
+    Post: Post_1
+    title: 'Bienvenidos a Salud Online'
+    content: "<p>Data Solutions is a free, W3C-compliant, CSS-based website template by styleshout.com. This work is distributed under the Creative Commons Attribution 2.5 License, which means that you are free to use and modify it for any purpose. All I ask is that you give me credit by including a link back to my website.</p>\r\n<pre><pre class=\"php\"><span class=\"kw1\">if</span><span class=\"br0\">&#40;</span><span class=\"re0\">$a</span> <span class=\"sy0\">&gt;</span> <span class=\"re0\">$b</span><span class=\"br0\">&#41;</span>\n<span class=\"br0\">&#40;</span>\n<span class=\"kw1\">echo</span> <span class=\"re0\">$a</span><span class=\"sy0\">;</span>\n<span class=\"br0\">&#41;</span>\n<span class=\"kw1\">else</span>\n<span class=\"br0\">&#123;</span>\n<span class=\"kw1\">echo</span> <span class=\"re0\">$b</span><span class=\"sy0\">;</span>\n<span class=\"br0\">&#125;</span></pre>\r\n</pre>\r\n<p>&nbsp;</p>\r\n<pre><pre class=\"sql\"><span class=\"kw1\">SELECT</span> <span class=\"sy0\">*</span> <span class=\"kw1\">FROM</span> cab_acta_muni_dist;</pre>\r\n</pre>\r\n<p>You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.net CoolBlue is a free, W3C-compliant, CSS-based website template by  styleshout.com. This work is distributed under the Creative Commons  Attribution 2.5 License, which means that you are free to use and modify  it for any purpose. All I ask is that you give me credit by including a  link back to my website.<br />You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.netYou can find more of my free template designs at my website. For premium  commercial designs, you can check out Themeforest.net CoolBlue is a  free, W3C-compliant, CSS-based website template by  styleshout.com. This  work is distributed under the Creative Commons  Attribution 2.5  License, which means that you are free to use and modify  it for any  purpose. All I ask is that you give me credit by including a  link back  to my website.<br />You can find more of my free template designs at my website. For premium commercial designs, you can check out Themeforest.net.</p>\r\n<p>&nbsp;</p>"
+  PostIndex_2:
+    Post: Post_2
+    title: 'Enfermeades Crónicas entre las principales causas de muerte en Essalud'
+    content: '<p style="text-align: justify;">El c&aacute;ncer y las enfermedades card&iacute;acas se encuentran entre las principales causas de muerte entre los asegurados de EsSalud, por lo que esta instituci&oacute;n est&aacute; implementando una intensa pol&iacute;tica de salud que prioriza la prevenci&oacute;n de la enfermedad y la promoci&oacute;n de la salud.<br /><br />Estas enfermedades son consideradas cr&oacute;nicas no transmisibles debido a que el afectado las va a padecer durante toda su vida y no son contra&iacute;das por contagio con otra persona.<br /><br />Para dar a conocer esta problem&aacute;tica, el presidente ejecutivo de EsSalud, doctor &Aacute;lvaro Vidal Rivadeneyra, fue invitado por el Banco Interamericano de Desarrollo (BID), a participar en la Conferencia Mundial de Salud 2011, que se realiza en Londres, Inglaterra, hasta el viernes 30 de setiembre. La cita tiene la presencia de destacados especialistas en temas de salud de todo el mundo.<br /><br />Durante esta visita de trabajo, la cual no representa gasto alguno a la instituci&oacute;n y es autorizada mediante Resoluci&oacute;n Ministerial N&deg;278-2011-TR, el doctor Vidal Rivadeneyra presentar&aacute; un informe sobre la situaci&oacute;n de la salud en el Per&uacute; y en particular en el Seguro Social de Salud, con la finalidad de recibir el apoyo del BID y concretar proyectos para la mejora de la salud de los asegurados.<br /><br />Entre estos prop&oacute;sitos, se encuentra la posible firma de un Convenio Marco de Cooperaci&oacute;n Internacional con el National Institute for Health and Clinical Excellence (NICE).<br /><br />El acuerdo contempla la elaboraci&oacute;n de Gu&iacute;as de Pr&aacute;ctica Cl&iacute;nica de enfermedades cr&oacute;nicas, basadas en evidencias; el dise&ntilde;o e implementaci&oacute;n de un sistema de vigilancia de determinantes sociales de la salud, asociados a enfermedades cr&oacute;nicas y la incorporaci&oacute;n a esfuerzos mundiales para mejorar el sistema de informaci&oacute;n en salud.<br /><br />NICE es una instituci&oacute;n que provee gu&iacute;as cl&iacute;nicas, define est&aacute;ndares de calidad y gestiona una base de datos nacional para mejorar la salud de las personas, as&iacute; como prevenir y tratar las enfermedades. Su trabajo se divide en 3 &aacute;reas: Salud P&uacute;blica, Pr&aacute;ctica Cl&iacute;nica y Tecnolog&iacute;as en Salud. Adem&aacute;s, brinda recomendaciones al Sistema Nacional de Salud (NHS) del Reino Unido sobre nuevos medicamentos y los ya existentes, tratamientos y procedimientos, manejo y cuidado de personas con enfermedades y cuidados espec&iacute;ficos, como es el caso de los afectados por enfermedades cr&oacute;nicas no transmisibles.</p>'
+Sponsor:
+  Sponsor_1:
+    name: 'Data Solutions'
+    url: 'http://datasolutions.pe'
+    description: 'Soluciones informáticas 2.0' 
+    
+Visit:
+  Visit_1:
+    remote_address: 190.43.32.112
+    remote_port: '10992'
+    http_user_agent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.9) Gecko/20100315 Firefox/3.5.9'
+    datetime: '2010-05-23 13:20:00'
+    created_at: '2010-05-23 13:20:00'
+    updated_at: '2010-05-23 13:20:00'
+  Visit_2:
+    remote_address: 190.43.32.112
+    remote_port: '11000'
+    http_user_agent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.9) Gecko/20100315 Firefox/3.5.9'
+    datetime: '2010-05-23 13:20:44'
+    created_at: '2010-05-23 13:20:44'
+    updated_at: '2010-05-23 13:20:44'    

@@ -1,0 +1,139 @@
+@CHARSET "UTF-8";
+/* ******************************************** Code ********************************************* */
+
+pre, code, kbd, samp, tt
+{
+	font-family                : monospace;
+	line-height                : 99%;
+}
+
+pre
+{
+	background-color           : #000000;
+	color                      : #FFFFFF;
+	font-size                  : 14px;
+	line-height                : 1.3em;
+	margin: 10px 25px;
+	overflow                   : auto;
+	padding                    : 0.7em 0.7em 0;
+}
+
+.php .imp {font-weight: bold; color: red}
+.php .st_h {color: #56DB3A}
+.php .kw1 {color: #FF8400}
+.php .kw2 {color: #FFFFFF}
+.php .kw3 {color: #E2392D}
+.php .kw4 {color: #1299DA}
+.php .sy0 {color: #E0882F}
+.php .co1 {color: #B729D9; font-style: italic}
+.php .co2 {color: #BD48B3; font-style: italic}
+.php .co4 {color: #ccc; font-style: italic}
+.php .coMULTI {color: #BD48B3; font-style: italic}
+.php .es0 {color: #ddd}
+.php .br0 {color: #fff}
+.php .st0 {color: #99FF00}
+.php .nu0 {color: #1299DA}
+.php .me1 {color: #FFFFFF}
+.php .me2 {color: #FFFFFF}
+.php .re0 {color: #FFFFFF}
+.php a {text-decoration: none}
+.xml .imp {font-weight: bold; color: red}
+.xml .coMULTI {color: #BD48B3; font-style: italic}
+.xml .sc-1 {color: #B729D9}
+.xml .es0 {color: #0000aa; font-weight: bold}
+.xml .br0 {color: #66cc66}
+.xml .st0 {color: #99FF00}
+.xml .nu0 {color: #cc66cc}
+.xml .sc0 {color: #00bbdd}
+.xml .sc1 {color: #ddbb00}
+.xml .sc2 {color: #339933}
+.xml .sc3 {color: #fff}
+.xml .re0 {color: #FFFFFF}
+.xml .re1 {color: #FFFFFF}
+.xml .re2 {color: #FFFFFF}
+.css .imp {font-weight: bold; color: red}
+.css .kw1 {color: #fff}
+.css .kw2 {color: #993333}
+.css .co1 {color: #a1a100}
+.css .coMULTI {color: #808080; font-style: italic}
+.css .es0 {color: #000099; font-weight: bold}
+.css .br0 {color: #66cc66}
+.css .st0 {color: #ff0000}
+.css .nu0 {color: #cc66cc}
+.css .re0 {color: #cc00cc}
+.css .re1 {color: #6666ff}
+.css .re2 {color: #3333ff}
+.javascript .imp {font-weight: bold; color: red}
+.javascript .kw1 {color: #FF8400}
+.javascript .kw2 {color: #FFCC66}
+.javascript .kw3 {color: #07DFFC}
+.javascript .co1 {color: #BD48B3; font-style: italic}
+.javascript .coMULTI {color: #BD48B3; font-style: italic}
+.javascript .es0 {color: #000099}
+.javascript .br0 {color: #fff}
+.javascript .st0 {color: #99FF00}
+.javascript .nu0 {color: #66CC66}
+.javascript .me1 {color: #FFCC66}
+.javascript .re0 {color: #fff}
+
+.yaml_top_dashes {
+  color: #CC8865;
+}
+
+.yaml_keys {
+  color: #ffffdd;
+}
+
+.yaml_colon {
+  color: #5598EE;
+}
+
+.yaml_string {
+  color: #9EE665;
+}
+
+.yaml_integer {
+  color: #57AAFF;
+}
+
+.yaml_float {
+  color: #57AAFF;
+}
+
+.yaml_decimal {
+  color: #57AAFF;
+}
+
+.yaml_boolean {
+  color: #57AAFF;
+}
+
+.yaml_array {
+  color: #ffffff;
+}
+
+.yaml_comment {
+  color: #ddd;
+}
+
+
+
+.sql .imp {font-weight: bold; color: red}
+.sql .st_h {color: #56DB3A}
+.sql .kw1 {color: #0000FF}
+.sql .kw2 {color: #FFFFFF}
+.sql .kw3 {color: #E2392D}
+.sql .kw4 {color: #1299DA}
+.sql .sy0 {color: #E0882F}
+.sql .co1 {color: #B729D9; font-style: italic}
+.sql .co2 {color: #BD48B3; font-style: italic}
+.sql .co4 {color: #ccc; font-style: italic}
+.sql .coMULTI {color: #BD48B3; font-style: italic}
+.sql .es0 {color: #ddd}
+.sql .br0 {color: #fff}
+.sql .st0 {color: #99FF00}
+.sql .nu0 {color: #1299DA}
+.sql .me1 {color: #FFFFFF}
+.sql .me2 {color: #FFFFFF}
+.sql .re0 {color: #FFFFFF}
+.sql a {text-decoration: none}

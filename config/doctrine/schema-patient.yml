@@ -1,0 +1,157 @@
+Patient:
+  tableName:                 t_patient
+  actAs:
+    SluggableExt:            { fields: [ username ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    realname:                { type: string   , length: 200                   , notnull: true                                                        } 
+    username:                { type: string   , length: 50                    , notnull: true                                                        }
+    password:                { type: string   , length: 255                   , notnull: true                                                        }
+    email:                   { type: string   , length: 100                   , notnull: true                                                        }
+    url:                     { type: string   , length: 255                                                                                          }
+    twitter_username:        { type: string   , length: 100                                                                                          }
+    phone:                   { type: string   , length: 100                                                                                          }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                           }
+    last_access_at:          { type: timestamp                                                                                                       }
+    facebook_id:            { type: string, length: 20                                                                                              }
+#    facebook_uid:            { type: integer, length: 4                                                                                              }
+#    email_hash:              { type: string , length: 255                                                                                            }
+  indexes:
+    i_username:              { fields: [ username ]                                                                                                  }
+    u_email:                 { fields: [ email ]                              , type: unique                                                         }
+    u_facebook_id:           { fields: [ facebook_id]                         , type: unique                                                         }    
+    i_url:                   { fields: [ url ]                                                                                                       }
+    i_twitter_username:      { fields: [ twitter_username ]                                                                                          }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Profile:                 { class: Profile   , local: patient_id   , foreign: profile_id   , alias: Profiles  , refClass: PatientProfile          }    
+    Doctor:                  { class: Doctor    , local: patient_id   , foreign: doctor_id    , alias: Doctors   , refClass: DoctorPatient           }    
+    Contact:                 { class: Contact   , local: patient_id   , foreign: contact_id   , alias: Contacts  , refClass: ContactPatient          }    
+    Resource:                { class: Resource  , local: patient_id   , foreign: resource_id  , alias: Resources , refClass: ResourcePatient         }    
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+Profile:
+  tableName:                 t_profile
+  actAs:
+    SluggableExt:            { fields: [ firstname,lastname ] }
+    Timestampable:    
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                 }
+    dni:                     { type: string   , length: 8                     , notnull: true                                                       }
+    firstname:               { type: string   , length: 100                   , notnull: true                                                       }
+    lastname:                { type: string   , length: 100                   , notnull: true                                                       }
+    date_of_birth:           { type: date                                                                                                           }
+    gender:                  { type: string   , length: 1  , fixed: true                                                                            }
+    image:                   { type: string   , length: 105                   , notnull: true                                                       }
+    description:             { type: string   , length: 5000                                                                                        }
+    type:                    { type: string   , length: 1  , fixed: true                                                                            }
+    blood_type:              { type: string   , length: 1  , fixed: true                                                                            }
+    marital_status:          { type: string   , length: 1  , fixed: true                                                                            }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                          }
+  indexes:
+    i_firstname:             { fields: [ firstname ]                                                                                                }
+    u_dni:                   { fields: [ dni ]                               , type: unique                                                         }
+    i_gender:                { fields: [ gender ]                                                                                                   }
+    i_active:                { fields: [ active ]                                                                                                   }    
+  relations:
+    Patient:                 { class: Patient   , local: profile_id   , foreign: patient_id  , alias: Patients, refClass: PatientProfile            }    
+    Weight:                  { class: Weight    , local: id           , foreign: profile_id, type: many, alias: Weights                             } 
+    Height:                  { class: Height    , local: id           , foreign: profile_id, type: many, alias: Heights                             } 
+    Treatment:               { class: Treatment , local: id           , foreign: profile_id, type: many, alias: Treatments                          } 
+
+PatientProfile:
+  tableName:                 t_patient_profile
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    patient_id:              { type: integer  , length: 20 , primary: true                                                                           }
+    profile_id:              { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Patient:                 { class: Patient         , local: patient_id   , foreign: id, type: one , alias: Patient , onDelete: CASCADE , onUpdate: CASCADE }
+    Profile:                 { class: Profile         , local: profile_id   , foreign: id, type: one , alias: Profile , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }
+    
+Weight:
+  tableName:                 t_weight
+  actAs:
+    Timestampable:                     
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                 }
+    profile_id:              { type: integer  , length: 20                    , notnull: true                                                       }
+    current_weight:          { type: decimal  , length: 10 , scale: 2                                                                               }    
+    expected_weight:         { type: decimal  , length: 10 , scale: 2                                                                               }
+    date_of_weight:          { type: date                                                                                                           }
+    description:             { type: string   , length: 5000                                                                                        }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                          }    
+  indexes:
+    i_current_weight:        { fields: [ current_weight ]                                                                                           }
+    i_active:                { fields: [ active ]                                                                                                   }    
+  relations:
+    Profile:                 { class: Profile   , local: profile_id   , foreign: id   , type: one , alias: Profile  , onDelete: RESTRICT, onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: true }
+    
+Height:
+  tableName:                 t_height
+  actAs:
+    Timestampable:                     
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                 }
+    profile_id:              { type: integer  , length: 20                    , notnull: true                                                       }
+    current_height:          { type: decimal  , length: 10 , scale: 2                                                                               }
+    date_of_height:          { type: date                                                                                                           }
+    description:             { type: string   , length: 5000                                                                                        }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                          }  
+  indexes:
+    i_current_height:        { fields: [ current_height ]                                                                                           }
+    i_active:                { fields: [ active ]                                                                                                   }    
+  relations:
+    Profile:                 { class: Profile   , local: profile_id   , foreign: id   , type: one , alias: Profile  , onDelete: RESTRICT, onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: true }    
+    
+
+#Wellness:
+#  tableName:                 t_wellness
+#  actAs:
+#    Timestampable:                     
+#  columns:
+#    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                 }
+#    profile_id:              { type: integer  , length: 20                    , notnull: true                                                       }
+#    blood_glucose:           { type: decimal  , length: 10 , scale: 2                                                                               }
+#    blood_pressure_a:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    blood_pressure_b:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    body_temperature:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    cycling_distance:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    cycling_time:            { type: decimal  , length: 10 , scale: 2                                                                               }
+#    exercise_minutes:        { type: integer  , length: 10                                                                                          }
+#    height:                  { type: decimal  , length: 10 , scale: 2                                                                               }
+#    heart_rate:              { type: decimal  , length: 10 , scale: 2                                                                               }
+#    hours_slept:             { type: integer  , length: 10                                                                                          }
+#    running_distance:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    running_time:            { type: integer  , length: 10                                                                                          }
+#    swimming_distance:       { type: decimal  , length: 10 , scale: 2                                                                               }
+#    swimming_time:           { type: integer  , length: 10                                                                                          }
+#    walking_distance:        { type: decimal  , length: 10 , scale: 2                                                                               }
+#    walking_time:            { type: integer  , length: 10                                                                                          }
+#    weight:                  { type: decimal  , length: 10 , scale: 2                                                                               }
+#    description:             { type: string   , length: 5000                                                                                        }
+#    type:                    { type: string   , length: 1  , fixed: true                                                                            }
+#    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                          }
+#  indexes:
+#    i_height:                { fields: [ height ]                                                                                                   }
+#    i_weight:                { fields: [ weight ]                                                                                                   }
+#    i_type:                  { fields: [ type   ]                                                                                                   }
+#    i_active:                { fields: [ active ]                                                                                                   }    
+#  relations:
+#    Profile:                 { class: Profile   , local: profile_id   , foreign: id   , type: one , alias: Profile  , onDelete: RESTRICT, onUpdate: CASCADE }
+#  options:
+#    symfony:                 { filter: false, form: true }
+    
+  
+
+    

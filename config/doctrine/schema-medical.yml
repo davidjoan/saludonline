@@ -1,0 +1,90 @@
+Specialty:
+  tableName:                 t_specialty
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    code:                    { type: string   , length: 5                     , notnull: true                                                        } 
+    name:                    { type: string   , length: 100                   , notnull: true                                                        }
+    description:             { type: string   , length: 5000                                                                                         }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    i_name:                  { fields: [ name ]                                                                                                      }
+    u_code:                  { fields: [ code ]                               , type: unique                                                         }
+    u_name:                  { fields: [ name ]                               , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Doctor:                  { class: Doctor    , local: id,   foreign: specialty_id   , type: many , alias: Doctors                                 }   
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+    
+Chapter:
+  tableName:                 t_chapter
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    code:                    { type: string   , length: 15                    , notnull: true                                                        } 
+    name:                    { type: string   , length: 200                   , notnull: true                                                        }
+    description:             { type: string   , length: 5000                                                                                         }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    i_name:                  { fields: [ name ]                                                                                                      }
+    u_code:                  { fields: [ code ]                               , type: unique                                                         }
+    u_name:                  { fields: [ name ]                               , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Group:                   { class: Group  , local: id           , foreign: chapter_id, type: many, alias: Groups                                  }  
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+Group:
+  tableName:                 t_group
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    chapter_id:              { type: integer  , length: 20                    , notnull: true                                                        }
+    code:                    { type: string   , length: 5                     , notnull: true                                                        } 
+    name:                    { type: string   , length: 500                   , notnull: true                                                        }
+    description:             { type: string   , length: 5000                                                                                         }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    u_code:                  { fields: [ code ]                               , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Chapter:                 { class: Chapter    , local: chapter_id   , foreign: id       , type: one  , alias: Chapter  , onDelete: RESTRICT, onUpdate: CASCADE }    
+    Diagnosis:               { class: Diagnosis  , local: id           , foreign: group_id , type: many , alias: Diagnosis                                        }  
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+
+Diagnosis:
+  tableName:                 t_diagnosis
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    group_id:                { type: integer  , length: 20                    , notnull: true                                                        }
+    code:                    { type: string   , length: 5                     , notnull: true                                                        } 
+    name:                    { type: string   , length: 100                   , notnull: true                                                        }
+    description:             { type: string   , length: 5000                                                                                         }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    i_name:                  { fields: [ name ]                                                                                                      }
+    u_code:                  { fields: [ code ]                               , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Group:                   { class: Group     , local: group_id     , foreign: id , type: one , alias: Group  , onDelete: RESTRICT, onUpdate: CASCADE }    
+    Treatment:               { class: Treatment , local: diagnosis_id , foreign: treatment_id   , alias: Treatments  , refClass: TreatmentDiagnosis     }
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]

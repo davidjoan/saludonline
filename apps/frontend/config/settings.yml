@@ -1,0 +1,43 @@
+prod:
+  .settings:
+    no_script_name:         true
+    logging_enabled:        false
+    
+cache:
+  .settings:
+    error_reporting: <?php echo (E_ALL | E_STRICT)."\n" ?>
+    web_debug:       true
+    cache:           true
+    etag:            false
+    
+
+dev:
+  .settings:
+    error_reporting:        <?php echo (E_ALL | E_STRICT)."\n" ?>
+    web_debug:              true
+    cache:                  false
+    no_script_name:         false
+    etag:                   false
+
+test:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    cache:                  false
+    web_debug:              false
+    no_script_name:         false
+    etag:                   false
+
+all:
+  .settings:
+    csrf_secret:            symfony_rules
+
+    escaping_strategy:      false
+    escaping_method:        ESC_SPECIALCHARS
+
+    standard_helpers:       [ Cache, JavascriptBase, Partial, FormExt, Toolkit, UrlExt ]
+    enabled_modules:        [ Crud, Error, Generic, Pager, sfDependentSelectAuto ]
+
+    use_database:           true
+    
+    default_culture:        es_PE
+    

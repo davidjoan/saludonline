@@ -1,0 +1,241 @@
+Specialty:
+  Specialty_2:
+    code: ENC    
+    name: ENDOCRINOLOGIA
+  Specialty_3:
+    code: OF1    
+    name: 'MEDICION DE VISTA (OFT)'
+  Specialty_4:
+    code: IMN    
+    name: 'INMUNOLOGIA Y ALERGIA'
+  Specialty_5:
+    code: PAT    
+    name: PATOLOGIA
+  Specialty_6:
+    code: PSO    
+    name: PSICOLOGIA
+  Specialty_7:
+    code: CPE    
+    name: 'CIRUGIA PEDIATRICA'
+  Specialty_8:
+    code: URO    
+    name: UROLOGIA
+  Specialty_9:
+    code: ME1    
+    name: 'PRUEBA GRUPO SANGUINEO'
+  Specialty_10:
+    code: GAS    
+    name: GASTROENTEROLOGIA
+  Specialty_11:
+    code: DER    
+    name: DERMATOLOGIA
+  Specialty_12:
+    code: OD1    
+    name: ODONTOGRAMA
+  Specialty_13:
+    code: RES    
+    name: RESIDENTE
+  Specialty_14:
+    code: ECO    
+    name: ECOGRAFIA
+  Specialty_15:
+    code: NEM    
+    name: NEUMOLOGIA
+  Specialty_16:
+    code: CRP    
+    name: 'CARDIOLOGIA PEDIATRICA'
+  Specialty_17:
+    code: GER    
+    name: GERIATRIA
+  Specialty_18:
+    code: GSP    
+    name: 'GASTROENTEROLOGIA PEDIATRICA'
+  Specialty_19:
+    code: CIG    
+    name: CIRUGIA GENERAL
+  Specialty_20:
+    code: ENP    
+    name: 'ENDOCRINOLOGIA PEDIATRICA'
+  Specialty_21:
+    code: ORT    
+    name: ORTOPEDIA
+  Specialty_22:
+    code: PRU    
+    name: 'ESPECIALIDAD DE PRUEBA'
+  Specialty_23:
+    code: ME3    
+    name: 'APLICACION DE INYECTABLES'
+  Specialty_24:
+    code: OTO    
+    name: OTORRINOLARINGOLOGIA
+  Specialty_25:
+    code: CCC    
+    name: 'CIRUGIA DE CABEZA Y CUELLO'
+  Specialty_26:
+    code: INP    
+    name: 'INFECTOLOGIA PEDIATRICA'
+  Specialty_27:
+    code: DEP    
+    name: 'DERMATOLOGIA PEDIATRICA'
+  Specialty_28:
+    code: OBS    
+    name: OBSTETRICIA
+  Specialty_29:
+    code: CDM    
+    name: 'CIRUGIA MANO'
+  Specialty_30:
+    code: INF    
+    name: INFECTOLOGO
+  Specialty_31:
+    code: MFA    
+    name: 'MEDICINA FAMILIAR'
+  Specialty_32:
+    code: MEN    
+    name: 'MEDICINA NUCLEAR'
+  Specialty_33:
+    code: NEU    
+    name: NEUROLOGIA
+  Specialty_34:
+    code: PRV    
+    name: PREVENTIVA
+  Specialty_35:
+    code: VAC    
+    name: VACUNAS
+  Specialty_36:
+    code: MEI    
+    name: 'MEDICINA INTENSIVISTA'
+  Specialty_37:
+    code: NMP    
+    name: 'NEUMOLOGIA PEDIATRICA'
+  Specialty_38:
+    code: ME4    
+    name: 'SALA DE REPOSO EN EMERGENCIA'
+  Specialty_39:
+    code: PAD    
+    name: 'PEDIATRIA DEL ADOLECENTE'
+  Specialty_40:
+    code: ME2    
+    name: 'CONTROL DE PRESION ARTERIAL'
+  Specialty_41:
+    code: MED    
+    name: 'MEDICINA INTERNA'
+  Specialty_42:
+    code: PSI    
+    name: PSIQUIATRIA
+  Specialty_43:
+    code: TRA    
+    name: TRAUMATOLOGIA
+  Specialty_44:
+    code: GIN    
+    name: GINECOLOGIA
+  Specialty_45:
+    code: REU    
+    name: REUMATOLOGIA
+  Specialty_46:
+    code: RAD    
+    name: 'RADIOLOGIA'
+  Specialty_47:
+    code: NUP    
+    name: 'NEUROLOGIA PEDIATRICA'
+  Specialty_48:
+    code: NEP    
+    name: 'NEFROLOGIA PEDIATRICA'
+  Specialty_49:
+    code: ONC    
+    name: ONCOLOGIA
+  Specialty_50:
+    code: OD2    
+    name: FLUORIZACION
+  Specialty_51:
+    code: HEM    
+    name: HEMATOLOGIA
+  Specialty_52:
+    code: END    
+    name: 'ENDOSCOPIA DIGESTIVA'
+  Specialty_53:
+    code: ODO    
+    name: ODONTOLOGIA
+  Specialty_54:
+    code: EMG    
+    name: EMERGENCISTA
+  Specialty_55:
+    code: EL1    
+    name: ELECTROENCEFALOGRAMA
+  Specialty_56:
+    code: NEC    
+    name: NEUROCIRUGIA
+  Specialty_57:
+    code: CMT    
+    name: 'CIRUGIA DE MAMAS Y TUMORES'
+  Specialty_58:
+    code: CIP    
+    name: 'CIRUGIA PLASTICA Y RECONSTRUCTIVA'
+  Specialty_59:
+    code: COL    
+    name: COLPOSCOPIA
+  Specialty_60:
+    code: REV    
+    name: REUMA-VERTEBRO
+  Specialty_61:
+    code: NEF    
+    name: NEFROLOGO
+  Specialty_62:
+    code: 999    
+    name: VARIOS
+  Specialty_63:
+    code: PED    
+    name: PEDIATRIA
+  Specialty_64:
+    code: NUT    
+    name: NUTRICION
+  Specialty_65:
+    code: NEO    
+    name: 'NEONATOLOGIA'
+  Specialty_66:
+    code: MER    
+    name: 'MEDICINA DE REHABILITACION'
+  Specialty_67:
+    code: MGR    
+    name: 'MEDICINA GENERAL'
+  Specialty_68:
+    code: CAR    
+    name: CARDIOLOGIA
+  Specialty_69:
+    code: CIM    
+    name: 'CIRUGIA MAXILO FACIAL'
+  Specialty_70:
+    code: ELE    
+    name: ELECTROENCEFALOGRAFIA
+  Specialty_71:
+    code: ANG    
+    name: ANGIOLOGIA
+  Specialty_72:
+    code: TPS    
+    name: 'TALLER PSICOTERAPEUTICO'
+  Specialty_73:
+    code: CIV    
+    name: 'CIRUGIA VASCULAR'
+  Specialty_74:
+    code: A00    
+    name: HUARAZ
+  Specialty_75:
+    code: GI1    
+    name: 'PRE-NATALES PROGRAMA DE PARTO'
+  Specialty_76:
+    code: OFT    
+    name: OFTALMOLOGIA
+  Specialty_77:
+    code: POD    
+    name: PODOLOGIA
+  Specialty_78:
+    code: ANE    
+    name: ANESTESIOLOGIA
+  Specialty_79:
+    code: CIT    
+    name: 'CIRUGIA DEL TORAX'
+  Specialty_80:
+    code: ZZZ    
+    name: STANDARD
+  Specialty_81:
+    code: CTC    
+    name: 'CIRUGIA DE TORAX Y CARDIOVASCULAR'

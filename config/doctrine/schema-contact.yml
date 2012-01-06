@@ -1,0 +1,47 @@
+Contact:
+  tableName:                 t_contact
+  actAs:
+    SluggableExt:            { fields: [ firstname ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    firstname:               { type: string   , length: 100                   , notnull: true                                                        } 
+    lastname:                { type: string   , length: 100                   , notnull: true                                                        }
+    gender:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    email:                   { type: string   , length: 100                   , notnull: false                                                       }    
+    home_phone:              { type: string   , length: 200                   , notnull: false                                                       }
+    office_phone:            { type: string   , length: 200                   , notnull: false                                                       }
+    mobile_phone:            { type: string   , length: 200                   , notnull: false                                                       }
+    rpm:                     { type: string   , length: 200                   , notnull: false                                                       }    
+    rpc:                     { type: string   , length: 200                   , notnull: false                                                       }    
+    nextel:                  { type: string   , length: 200                   , notnull: false                                                       }    
+    fax:                     { type: string   , length: 200                   , notnull: false                                                       }
+    address_home:            { type: string   , length: 200                   , notnull: false                                                       }
+    address_work:            { type: string   , length: 200                   , notnull: false                                                       }
+    description:             { type: string   , length: 5000                  , notnull: false                                                       }
+    prefix:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+  indexes:
+    i_firstname:             { fields: [ firstname ]                                                                                                 }
+    i_lastname:              { fields: [ lastname ]                                                                                                  }
+    #u_email:                 { fields: [ email ]                              , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Patient:                 { class: Patient     , local: contact_id      , foreign: patient_id       , alias: Patients   , refClass: ContactPatient }    
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+
+ContactPatient:
+  tableName:                 t_contact_patient
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    contact_id:               { type: integer  , length: 20 , primary: true                                                                           }
+    patient_id:              { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Contact:                 { class: Contact        , local: contact_id  , foreign: id, type: one , alias: Contact  , onDelete: CASCADE , onUpdate: CASCADE }
+    Patient:                 { class: Patient        , local: patient_id  , foreign: id, type: one , alias: Patient  , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }    

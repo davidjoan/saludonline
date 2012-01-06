@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+/* ******************************************** General ****************************************** */
+
+/****************************** Tags ***************************************/
+
+body
+{
+	background                 : #B4CADC none repeat scroll 0 0;
+	color                      : #000000;
+	font-family                : Tahoma, sans-serif;
+	font-size                  : 11px;
+	text-align                 : center;
+}
+
+h1
+{
+  font-size                  : 11pt;
+  font-weight                : bold;
+}
+
+hr
+{
+  border                     : 1px solid #B4CADC;
+  width                      : 384px;
+}
+
+
+
+/**************************** Main ***********************************/
+
+.wrap
+{
+	background-color           : #FFFFFF;
+	border-color               : #CCCCCC #8BA8DC #8BA8DC #CCCCCC;
+	border-style               : solid;
+	border-width               : 1px 2px 2px 1px;
+  margin                     : 0 auto;
+	height                     : 696px;
+  width                      : 500px;
+}
+
+.header
+{
+  padding                    : 20px;
+}
+
+.content
+{
+	padding                    : 35px 0 0 0;
+}
+
+.footer
+{
+	font-size                  : 10px;
+	margin                     : 100px 0 0 0;
+	text-align                 : center;
+}

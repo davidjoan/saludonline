@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+/* ******************************************** Menu ********************************************* */
+
+table.menu
+{
+}
+
+table.menu table.submenu
+{
+	width                      : auto;
+}
+
+table.menu td img
+{
+  padding                    : 0 4px 0 0;
+  vertical-align             : middle;
+}
+
+table.menu td.menu_l_sel
+{
+	background                 : transparent url(../../images/backend/menu/menu_l_sel.gif) no-repeat;
+  padding                    : 0 3px 0 0;
+}
+
+table.menu td.menu_l
+{
+	background                 : transparent url(../../images/backend/menu/menu_l.gif) no-repeat;
+  padding                    : 0 3px 0 0;
+}
+
+table.menu td.main
+{
+	cursor                     : pointer;
+	font-family                : Verdana, Arial, sans-serif;
+	font-weight                : bold;
+	font-size                  : 11px;
+	padding                    : 3px 0 0 2px;
+	text-align                 : center;
+	white-space                : nowrap;
+}
+
+table.menu td.active
+{
+	background-color           : #FFFFFF;
+}
+
+table.menu td.inactive
+{
+	background-color           : #DEE2E8;
+	color                      : #000000;
+}
+
+table.menu td.menu_r_sel
+{
+	background                 : transparent url(../../images/backend/menu/menu_r_sel.gif) no-repeat;
+  padding                    : 0 5px 0 0;
+  width                      : 3px;
+}
+
+table.menu td.menu_r
+{
+	background                 : transparent url(../../images/backend/menu/menu_r.gif) no-repeat;
+  padding                    : 0 5px 0 0;
+  width                      : 3px;
+}

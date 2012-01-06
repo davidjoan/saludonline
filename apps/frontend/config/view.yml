@@ -1,0 +1,29 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Salud Online | Inicio
+    description:  salud online es una novedosa plataforma gratuita donde podras registar tu historia clinica.
+    keywords:     salud, online, health,peru, plataforma,gratis,free
+    language:     es
+    robots:       index, follow
+
+  stylesheets:
+    - frontend/screen.css:              { media: screen }
+    - frontend/code.css:                { media: screen }
+    - general/jquery-ui-1.8.custom.css: { media: screen }
+    - general/jquery.fancybox.css:      { media: screen }
+    
+  javascripts:
+    - jquery/jquery-1.4.2.min.js
+    - jquery/jquery-ui-1.8.min.js
+    - jquery/mousewheel.pack.js
+    - jquery/fancybox.pack.js
+    - general/general.js
+    
+  has_layout:     true
+  layout:         layout

@@ -1,0 +1,27 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: 'text/html; charset=utf-8'
+
+  metas:
+    title:        Salud Online Admin
+    description:  sistema de administracion de salud online
+    keywords:     salud, online, peru
+    language:     es
+    robots:       index, follow
+
+  stylesheets:
+    - general/main.css:                { position: first }
+    - backend/general.css:             { position: first }
+    - backend/button.css:              { position: first }
+    - backend/code.css:              { position: first }
+
+  javascripts:
+    - jquery/jquery-1.4.2.min.js
+    - jquery/jquery-ui-1.8.min.js
+    - general/general.js
+
+  has_layout:     true
+  layout:         layout

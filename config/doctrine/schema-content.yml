@@ -1,0 +1,85 @@
+Post:
+  tableName:                           t_post
+  actAs:
+    SluggableExt:                      { fields: [ title ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    user_id:                           { type: integer  , length: 20                    , notnull: true                                                        }
+    title:                             { type: string   , length: 200                   , notnull: true                                                        }
+    image:                             { type: string   , length: 200                   , notnull: true                                                        }
+    content:                           { type: string   , length: 20000                 , notnull: true                                                        }
+    excerpt:                           { type: string   , length: 500                   , notnull: true                                                        }
+    meta_description:                  { type: string   , length: 5000                  , notnull: true                                                        }
+    meta_keywords:                     { type: string   , length: 1000                  , notnull: true                                                        }
+    datetime:                          { type: datetime                                 , notnull: true                                                        }
+    status:                            { type: string   , length: 2  , fixed: true      , notnull: true , default: PE                                          }
+  indexes:
+    u_title:                           { fields: [ title ]                              , type: unique                                                         }
+    i_content:                         { fields: { content: { length: 400 } }                                                                                  }
+    i_excerpt:                         { fields: { excerpt: { length: 100 } }                                                                                  }
+    i_datetime:                        { fields: [ datetime ]                                                                                                  }
+    i_status:                          { fields: [ status ]                                                                                                    }
+  relations:
+    User:                              { class: User             , local: user_id       , foreign: id           , type: one , alias: User      , onDelete: RESTRICT, onUpdate: CASCADE }
+    PostIndex:                         { class: PostIndex        , local: id            , foreign: post_id      , type: one , alias: PostIndex                                         }
+    Category:                          { class: Category         , local: post_id       , foreign: category_id              , alias: Categories, refClass: PostCategory                }
+    Comment:                           { class: Comment          , local: id            , foreign: post_id      , type: many, alias: Comments                                          }
+  options:
+    symfony:                           { filter: false, form: true }
+    type_columns:                      [ status ]
+    
+    
+PostIndex:
+  tableName:                           t_post_index
+  actAs:
+    SluggableExt:                      { fields: [ title ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    post_id:                           { type: integer  , length: 20                    , notnull: true                                                        }
+    title:                             { type: string   , length: 200                   , notnull: true                                                        }
+    content:                           { type: string   , length: 20000                 , notnull: true                                                        }
+  indexes:
+    u_title:                           { fields: [ title ]                              , type: unique                                                         }
+    i_content:                         { fields: { content: { length: 400 } }                                                                                  }
+  relations:
+    Post:                              { class: Post             , local: post_id       , foreign: id           , type: one , alias: Post      , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: false }
+    
+    
+Comment:
+  tableName:                           t_comment
+  actAs:
+    SluggableExt:                      { fields: [ author_name, datetime ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    post_id:                           { type: integer  , length: 20                    , notnull: true                                                        }
+    user_id:                           { type: integer  , length: 20                                                                                           }
+    author_name:                       { type: string   , length: 100                   , notnull: true                                                        }
+    author_email:                      { type: string   , length: 100                   , notnull: true                                                        }
+    author_url:                        { type: string   , length: 200                                                                                          }
+    author_twitter_username:           { type: string   , length: 100                                                                                          }
+    author_ip:                         { type: string   , length: 100                   , notnull: true                                                        }
+    content:                           { type: string   , length: 5000                  , notnull: true                                                        }
+    datetime:                          { type: datetime                                 , notnull: true                                                        }
+    agent:                             { type: string   , length: 255                   , notnull: true                                                        }
+    approved:                          { type: string   , length: 1  , fixed: true      , notnull: true, default: 0                                            }
+  indexes:
+    i_author_name:                     { fields: [ author_name ]                                                                                               }
+    i_author_email:                    { fields: [ author_email ]                                                                                              }
+    i_author_url:                      { fields: [ author_url ]                                                                                                }
+    i_author_twitter_username:         { fields: [ author_twitter_username ]                                                                                   }
+    i_author_ip:                       { fields: [ author_ip ]                                                                                                 }
+    i_content:                         { fields: { content: { length: 200 } }                                                                                  }
+    i_datetime:                        { fields: [ datetime ]                                                                                                  }
+    i_approved:                        { fields: [ approved ]                                                                                                  }
+  relations:
+    Post:                              { class: Post               , local: post_id     , foreign: id           , type: one , alias: Post  , onDelete: RESTRICT, onUpdate: CASCADE }
+    User:                              { class: User               , local: user_id     , foreign: id           , type: one , alias: User  , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ approved ]
+    

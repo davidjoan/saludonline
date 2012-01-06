@@ -1,0 +1,25 @@
+############################################## ROUTING ####################################################
+
+###########################
+######### General #########
+###########################
+
+#Error
+error_delete_error:
+  url:             /error/delete_error
+  param:           { module: Error, action: deleteError }
+
+
+
+#Generic
+generic_get_attribute_value:
+  url:             /generic/get_attribute_value
+  param:           { module: Generic, action: getAttributeValue }
+
+generic_add_dynamic_form:
+  url:             /general/add_dynamic_form
+  param:           { module: Generic, action: addDynamicForm }
+
+generic_remove_dynamic_form:
+  url:             /generic/remove_dynamic_form
+  param:           { module: Generic, action: removeDynamicForm }

@@ -1,0 +1,142 @@
+@CHARSET "UTF-8";
+/* ******************************************** General ****************************************** */
+
+/****************************** Tags ***************************************/
+
+html
+{
+  height                     : 100%;
+}
+
+body
+{
+  background-color           : #B4CADC;
+  color                      : #000000;
+  font-family                : Tahoma, sans-serif;
+  font-size                  : 11px;
+}
+
+table
+{
+  border-collapse            : collapse;
+  width                      : 100%;
+}
+
+td
+{
+  padding                    : 0;
+}
+
+a
+{
+  color                      : #000000;
+  font-family                : Arial, sans-serif;
+  font-size                  : 11px;
+  font-weight                : normal;
+  text-decoration            : underline;
+}
+
+a:hover
+{
+  color                      : #0000CC;
+}
+
+h1
+{
+  font-size                  : 14px;
+  margin                     : 0 0 10px 0;
+}
+
+select, input
+{
+  color                      : #000000; 
+  font-family                : Verdana, sans-serif;
+  font-size                  : 8pt; 
+  font-weight                : normal;
+}
+
+p
+{
+  margin                     : 10px;
+}
+
+
+
+/************************ Double List *********************************/
+
+div.double_list_label
+{
+  font-weight                : bold;
+  text-align                 : center;
+  margin                     : 0 0 10px 0;
+}
+
+select.double_list_select
+{
+  width                      : 180px;
+}
+
+select.double_list_select-selected
+{
+  width                      : 180px;
+}
+
+
+
+/****************************** Classes ***********************************/
+
+div.breadcrumb
+{
+  background-color           : #FFFFFF;
+  color                      : #666666;
+  font-size                  : 13px;
+  font-weight                : bold;
+  padding                    : 6px 8px 6px 8px;
+}
+
+div.breadcrumb a
+{
+  font-size                  : 13px;
+  font-weight                : bolder;
+}
+
+div.title
+{
+  background-color           : #2B7DC7;
+  color                      : #FFFFFF;
+  font-size                  : 13px;
+  font-weight                : bold;
+  padding                    : 6px 8px 6px 8px;
+}
+
+div.subtitle
+{
+  background-color           : #AFC0DE;
+  color                      : #000000;
+  font-size                  : 11px;
+  font-weight                : bold;
+  margin                     : 3px 5px 3px 5px;
+  padding                    : 6px 8px 6px 8px;
+}
+
+div.subtitle a
+{
+  font-weight                : bolder;
+  text-decoration            : none;
+}
+
+div.separator
+{
+  clear                      : both;
+  display                    : block;
+}
+
+.lighter
+{
+  opacity                    : 0.35;
+}
+
+.inactive
+{
+  color                      : #999999;
+}

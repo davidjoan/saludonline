@@ -1,0 +1,11 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=saludon_line
+      #username: saludon_user
+      #password: ''
+      username: root
+      password: ''
+      attributes:
+        use_dql_callbacks: true      	  

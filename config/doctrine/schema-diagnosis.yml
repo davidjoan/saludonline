@@ -1,0 +1,36 @@
+Treatment:
+  tableName:                 t_treatment
+  actAs:
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    doctor_id:               { type: integer  , length: 20                    , notnull: true                                                        }
+    profile_id:              { type: integer  , length: 20                    , notnull: true                                                        }
+    hospital_id:             { type: integer  , length: 20                    , notnull: true                                                        }
+    date_of_treatment:       { type: date                                                                                                            }
+    description:             { type: string   , length: 5000                                                                                         }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Profile:                 { class: Profile      , local: profile_id   , foreign: id, type: one , alias: Profile      , onDelete: RESTRICT , onUpdate: CASCADE }
+    Doctor:                  { class: Doctor       , local: doctor_id    , foreign: id, type: one , alias: Doctor       , onDelete: RESTRICT , onUpdate: CASCADE }
+    Hospital:                { class: Hospital     , local: hospital_id  , foreign: id, type: one , alias: Hospital     , onDelete: RESTRICT , onUpdate: CASCADE }
+    Diagnosis:               { class: Diagnosis    , local: treatment_id , foreign: diagnosis_id  , alias: Diagnosises  , refClass: TreatmentDiagnosis }
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]  
+
+
+TreatmentDiagnosis:
+  tableName:                 t_treatment_diagnosis
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    treatment_id:            { type: integer  , length: 20 , primary: true                                                                           }
+    diagnosis_id:            { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Treatment:               { class: Treatment      , local: treatment_id , foreign: id, type: one , alias: Treatment , onDelete: CASCADE , onUpdate: CASCADE }
+    Diagnosis:               { class: Diagnosis      , local: diagnosis_id , foreign: id, type: one , alias: Diagnosis , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }

@@ -1,0 +1,14 @@
+Sponsor:
+  tableName:                           t_sponsor
+  actAs:
+    SluggableExt:                      { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    name:                              { type: string   , length: 100                   , notnull: true                                                        }
+    url:                               { type: string   , length: 100                   , notnull: true                                                        }    
+    description:                       { type: string   , length: 5000                  , notnull: false                                                       }
+  indexes:
+    u_name:                            { fields: [ name ]                               , type: unique                                                         }
+  options:
+    symfony:                           { filter: false, form: true }    

@@ -1,0 +1,278 @@
+#######################
+######### Resource ####
+#######################
+
+
+resource_show:
+  url:             /ver/recurso
+  param:           { module: Resource, action: index }
+  requirements:    { slug: '[\w-]+' }
+
+resource_new:
+  url:             /nuevo/recurso
+  param:           { module: Resource, action: edit }
+
+resource_edit:
+  url:             /editar/recurso/:slug
+  param:           { module: Resource, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+resource_delete:
+  url:             /eliminar/recurso/:slug
+  param:           { module: Resource, action: delete }
+  requirements:    { slug: '[\w-,]+' }  
+  
+#######################
+######### Contact #####
+#######################
+
+
+contact_show:
+  url:             /ver/contactos
+  param:           { module: Contact, action: index }
+  requirements:    { slug: '[\w-]+' }
+
+contact_new:
+  url:             /nuevo/contacto
+  param:           { module: Contact, action: edit }
+
+contact_edit:
+  url:             /editar/contacto/:slug
+  param:           { module: Contact, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+contact_delete:
+  url:             /eliminar/contacto/:slug
+  param:           { module: Contact, action: delete }
+  requirements:    { slug: '[\w-,]+' }  
+
+#######################
+######### Doctor ######
+#######################
+doctor_load_hospital:
+  url:             /doctor/carga_de_hospitales
+  param:           { module: Doctor, action: loadHospitals, secure: false }
+ 
+
+doctor_show:
+  url:             /ver/mis/doctores
+  param:           { module: Doctor, action: index }
+  requirements:    { slug: '[\w-]+' }
+
+doctor_new:
+  url:             /nuevo/doctor
+  param:           { module: Doctor, action: edit }
+
+doctor_edit:
+  url:             /editar/doctor/:slug
+  param:           { module: Doctor, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+doctor_delete:
+  url:             /eliminar/doctor/:slug
+  param:           { module: Doctor, action: delete }
+  requirements:    { slug: '[\w-,]+' }   
+
+
+##########################
+######### Treatment ######
+##########################
+
+
+treatment_load_hospital:
+  url:             /tratamiento/carga_de_hospitales
+  param:           { module: Treatment, action: loadHospitals, secure: false }
+  
+
+treatment_load_doctor:
+  url:             /tratamiento/carga_de_doctores
+  param:           { module: Treatment, action: loadDoctors, secure: false }
+  
+treatment_load_diagnosis:
+  url:             /tratamiento/carga_de_diagnosticos
+  param:           { module: Treatment, action: loadDiagnosis, secure: false }  
+
+treatment_show:
+  url:             /ver/tratamiento/:slug
+  param:           { module: Treatment, action: show }
+  requirements:    { slug: '[\w-]+' }
+
+treatment_new:
+  url:             /nuevo/tratamiento/:slug
+  param:           { module: Treatment, action: new }
+  requirements:    { slug: '[\w-]+' }
+
+treatment_edit:
+  url:             /editar/tratamiento/:slug
+  param:           { module: Treatment, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+treatment_delete:
+  url:             /eliminar/tratamiento/:slug
+  param:           { module: Treatment, action: delete }
+  requirements:    { slug: '[\w-,]+' }   
+
+
+##########################
+######### Height #########
+##########################
+height_show:
+  url:             /ver/talla/:slug
+  param:           { module: Height, action: show }
+  requirements:    { slug: '[\w-]+' }
+
+height_new:
+  url:             /nuevo/talla/:slug
+  param:           { module: Height, action: new }
+  requirements:    { slug: '[\w-]+' }
+
+height_edit:
+  url:             /editar/talla/:slug
+  param:           { module: Height, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+height_delete:
+  url:             /eliminar/talla/:slug
+  param:           { module: Height, action: delete }
+  requirements:    { slug: '[\w-,]+' }   
+
+
+##########################
+######### Weight #########
+##########################
+weight_show:
+  url:             /ver/peso/:slug
+  param:           { module: Weight, action: show }
+  requirements:    { slug: '[\w-]+' }
+
+weight_new:
+  url:             /nuevo/peso/:slug
+  param:           { module: Weight, action: new }
+  requirements:    { slug: '[\w-]+' }
+
+weight_edit:
+  url:             /editar/peso/:slug
+  param:           { module: Weight, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+weight_delete:
+  url:             /eliminar/peso/:slug
+  param:           { module: Weight, action: delete }
+  requirements:    { slug: '[\w-,]+' }   
+
+
+###########################
+######### Patient #########
+###########################
+
+patient_edit:
+  url:             /editar/usuario
+  param:           { module: Patient, action: edit }
+  
+###########################
+######### Profile #########
+###########################
+
+profile_print:
+  url:             /imprimir/perfil/:slug
+  param:           { module: Profile, action: print }
+  requirements:    { slug: \w+ }
+  
+profile_panel:
+  url:             /ver/perfil/:slug
+  param:           { module: Profile, action: show }
+  requirements:    { slug: '[\w-]+' }
+
+profile_new:
+  url:             /nuevo/perfil
+  param:           { module: Profile, action: edit }
+
+profile_edit:
+  url:             /editar/perfil/:slug
+  param:           { module: Profile, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+profile_delete:
+  url:             /eliminar/perfil/:slug
+  param:           { module: Profile, action: delete }
+  requirements:    { slug: '[\w-,]+' }   
+
+###########################
+######### Log #############
+###########################
+
+#Log
+profile_show:
+  url:             /panel
+  param:           { module: Panel, action: index }
+  
+###########################
+######### Log #############
+###########################
+
+#Log
+log_login:
+  url:             /login
+  param:           { module: Log, action: login }
+  
+log_logout:
+  url:             /logout
+  param:           { module: Log, action: logout }
+  
+#28122011
+log_login_facebook:
+  url:             /login/facebook/*
+  param:           { module: Log, action: loginFacebook }
+
+###########################
+######### Feed ############
+###########################
+
+#Feed
+feed_last_posts:
+  url:             /feed
+  param:           { module: Feed, action: lastPosts }
+
+feed_category_last_posts:
+  url:             /categoria/:category_slug/feed
+  param:           { module: Feed, action: lastPosts }
+  
+
+##########################
+########## Post ##########
+##########################
+
+register:
+  url:             /registrate
+  param:           { module: Home, action: register }
+  
+forgot_password:
+  url:             /olvido/su/password
+  param:           { module: Home, action: forgotPassword }
+  
+
+image:
+  url:             /image
+  param:           { module: Home, action: image }
+
+contact:
+  url:             /contactenos
+  param:           { module: Home, action: contact }
+
+post_show:
+  url:             /articulo/:slug
+  param:           { module: Home, action: show }
+  requirements:    { slug: \w+ }
+  
+  
+  
+##############################
+######### Default ############
+##############################
+
+homepage:
+  url:             /
+  param:           { module: Home, action: index }
+
+default:
+  url:             /:module/:action/*

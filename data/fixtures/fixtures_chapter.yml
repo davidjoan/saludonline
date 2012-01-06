@@ -1,0 +1,68 @@
+Chapter:
+  Chapter_1:
+    code: A00-B99
+    name: Ciertas enfermedades infecciosas y parasitarias
+  Chapter_2:
+    code: C00-D48
+    name: Neoplasias
+  Chapter_3:
+    code: D50-D89
+    name: Enfermedades de la sangre y de los órganos hematopoyéticos y otros trastornos que afectan el mecanismo de la inmunidad
+  Chapter_4:
+    code: E00-E90
+    name: "Enfermedades endocrinas, nutricionales y metabólicas"
+  Chapter_5:
+    code: F00-F99
+    name: Trastornos mentales y del comportamiento
+  Chapter_6:
+    code: G00-G99
+    name: Enfermedades del sistema nervioso
+  Chapter_7:
+    code: H00-H59
+    name: Enfermedades del ojo y sus anexos
+  Chapter_8:
+    code: H60-H95
+    name: Enfermedades del oído y de la apófisis mastoides
+  Chapter_9:
+    code: I00-I99
+    name: Enfermedades del sistema circulatorio
+  Chapter_10:
+    code: J00-J99
+    name: "Enfermedades del sistema respiratorio"
+  Chapter_11:
+    code: K00-K93
+    name: "Enfermedades del aparato digestivo"
+  Chapter_12:
+    code: L00-L99
+    name: "Enfermedades de la piel y el tejido subcutáneo"
+  Chapter_13:
+    code: M00-M99
+    name: "Enfermedades del sistema osteomuscular y del tejido conectivo"
+  Chapter_14:
+    code: N00-N99
+    name: 2Enfermedades del aparato genitourinario"
+  Chapter_15:
+    code: O00-O99
+    name: "Embarazo, parto y puerperio"
+  Chapter_16:
+    code: P00-P96
+    name: Ciertas afecciones originadas en el periodo perinatal
+  Chapter_17:
+    code: Q00-Q99
+    name: "Malformaciones congénitas, deformidades y anomalías cromosómicas"
+  Chapter_18:
+    code: R00-R99
+    name: "Síntomas, signos y hallazgos anormales clínicos y de laboratorio, no clasificados en otra parte"
+  Chapter_19:
+    code: S00-T98
+    name: "Traumatismos, envenenamientos y algunas otras consecuencias de causa externa"
+  Chapter_20:
+    code: V01-Y98
+    name: "Causas extremas de morbilidad y de mortalidad"
+  Chapter_21:
+    code: Z00-Z99
+    name: "Factores que influyen en el estado de salud y contacto con los servicios de salud"
+  Chapter_22:
+    code: U00-U99
+    name: "Códigos para situaciones especiales"
+ 

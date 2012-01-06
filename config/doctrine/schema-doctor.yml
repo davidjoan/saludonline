@@ -1,0 +1,87 @@
+Hospital:
+  tableName:                 t_hospital
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    code:                    { type: string   , length: 5                     , notnull: true                                                        } 
+    name:                    { type: string   , length: 100                   , notnull: true                                                        }
+    address:                 { type: string   , length: 400                                                                                          }
+    phone:                   { type: string   , length: 100                                                                                          }
+    description:             { type: string   , length: 5000                                                                                         }
+    type:                    { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    i_name:                  { fields: [ name ]                                                                                                      }
+    u_code:                  { fields: [ code ]                               , type: unique                                                         }
+    u_name:                  { fields: [ name ]                               , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Doctor:                  { class: Doctor    , local: hospital_id   , foreign: doctor_id  , alias: Doctors, refClass: DoctorHospital              }    
+    Treatment:               { class: Treatment , local: id,   foreign: hospital_id   , type: many , alias: Treatments                               }  
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active, type ]
+    
+Doctor:
+  tableName:                 t_doctor
+  actAs:
+    SluggableExt:            { fields: [ firstname ] }
+    Timestampable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    specialty_id:            { type: integer  , length: 20                    , notnull: true                                                        }
+    firstname:               { type: string   , length: 100                   , notnull: true                                                        } 
+    lastname:                { type: string   , length: 100                   , notnull: true                                                        }
+    gender:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    email:                   { type: string   , length: 100                   , notnull: true                                                        }    
+    username:                { type: string   , length: 50                    , notnull: false                                                       }
+    password:                { type: string   , length: 255                   , notnull: false                                                       }    
+    home_phone:              { type: string   , length: 200                   , notnull: false                                                       }
+    office_phone:            { type: string   , length: 200                   , notnull: false                                                       }
+    mobile_phone:            { type: string   , length: 200                   , notnull: false                                                       }
+    fax:                     { type: string   , length: 200                   , notnull: false                                                       }
+    description:             { type: string   , length: 5000                  , notnull: false                                                       }
+    prefix:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    active:                  { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    last_access_at:          { type: timestamp                                                                                                       }    
+  indexes:
+    i_firstname:             { fields: [ firstname ]                                                                                                 }
+    i_lastname:              { fields: [ lastname ]                                                                                                  }
+    u_email:                 { fields: [ email ]                              , type: unique                                                         }
+    i_active:                { fields: [ active ]                                                                                                    }
+  relations:
+    Treatment:               { class: Treatment   , local: id,   foreign: doctor_id   , type: many , alias: Treatments                               }   
+    Hospital:                { class: Hospital    , local: doctor_id      , foreign: hospital_id      , alias: Hospitals  , refClass: DoctorHospital              }    
+    Patient:                 { class: Patient     , local: doctor_id      , foreign: patient_id       , alias: Patients   , refClass: DoctorPatient               }    
+    Specialty:               { class: Specialty   , local: specialty_id   , foreign: id   , type: one , alias: Specialty  , onDelete: RESTRICT, onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: true }
+    boolean_columns:         [ active ]
+    
+DoctorHospital:
+  tableName:                 t_doctor_hospital
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    doctor_id:               { type: integer  , length: 20 , primary: true                                                                           }
+    hospital_id:             { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Doctor:                  { class: Doctor         , local: doctor_id   , foreign: id, type: one , alias: Doctor   , onDelete: CASCADE , onUpdate: CASCADE }
+    Hospital:                { class: Hospital       , local: hospital_id , foreign: id, type: one , alias: Hospital , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }
+    
+DoctorPatient:
+  tableName:                 t_doctor_patient
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    doctor_id:               { type: integer  , length: 20 , primary: true                                                                           }
+    patient_id:              { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Doctor:                  { class: Doctor         , local: doctor_id   , foreign: id, type: one , alias: Doctor   , onDelete: CASCADE , onUpdate: CASCADE }
+    Patient:                 { class: Patient        , local: patient_id  , foreign: id, type: one , alias: Patient  , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }    

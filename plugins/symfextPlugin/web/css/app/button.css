@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+/* ******************************************** Buttons ****************************************** */
+
+.button
+{
+  background-color           : #6A94DF;
+  border-bottom              : #A8B5D8 2px groove;
+  border-left                : #FFFFFF 2px groove;
+  border-right               : #A8B5D8 2px groove;
+  border-top                 : #FFFFFF 2px groove;
+  color                      : #FFFFFF;
+  cursor                     : pointer;
+  font-family                : Tahoma, Sans-serif;
+  font-size                  : 8pt;
+  font-weight                : bold;
+  height                     : 1.3em;
+  padding                    : 1px 15px 1px 15px;
+  text-align                 : center;
+  text-decoration            : none;
+  white-space                : nowrap;
+  width                      : auto;
+}
+
+.inputbutton, 
+.inputsubmit
+{
+  background-color           : #6A94DF;
+  border-bottom              : #A8B5D8 2px groove;
+  border-left                : #FFFFFF 2px groove;
+  border-right               : #A8B5D8 2px groove;
+  border-top                 : #FFFFFF 2px groove;
+  color                      : #FFFFFF;
+  cursor                     : pointer;
+  font-family                : Tahoma, Sans-serif;
+  font-size                  : 11px;
+  font-weight                : bold;
+  padding                    : 2px 15px 3px;
+  text-align                 : center;
+}
+
+.inputaux
+{
+  background                 : #F0F0F0 none repeat scroll 0 0;
+  border-bottom              : #666666 2px groove;
+  border-left                : #E7E7E7 2px groove;
+  border-right               : #666666 2px groove;
+  border-top                 : #E7E7E7 2px groove;
+  color                      : #000000;
+}
+
+.button_disabled
+{
+  background-color           : #C0C0C0;
+  cursor                     : default;
+}
+
+.button_enabled
+{
+  background-color           : #6A94DF;
+  cursor                     : pointer;
+}
+
+.button_small
+{
+  width                      : 50px;
+}
+
+.button_medium
+{
+  width                      : 100px;
+}
+
+.button_large
+{
+  width                      : 150px;
+}
+
+.button_submit
+{
+  padding-top                : 0;
+  height                     : 20px;
+  width                      : 80px;
+}

@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+/* ********************************************* Form ******************************************** */
+
+div.form_edit
+{
+}
+
+div.form_edit table.form
+{
+	border-spacing             : 0px;
+  font-size                  : 11px;
+	text-align                 : center;
+	width                      : 100%;
+}
+
+div.form_edit table.form td.error
+{
+  color                      : #FF0000;
+  font-weight                : bold;
+  padding                    : 10px 0px 10px 20px;
+}
+
+div.form_edit table.form td.error li
+{
+  padding                    : 5px 0 5px 0;
+}
+
+div.form_edit table.form th.title
+{
+}
+
+div.form_edit table.form td.label
+{
+  color                      : #000000;
+  font-weight                : bold;
+  padding                    : 5px 10px 5px 5px;
+  text-align                 : right;
+  vertical-align             : top;
+  width                      : 140px;
+}
+
+div.form_edit table.form td.field
+{
+	color                      : #000000;
+	font-weight                : normal;
+	padding                    : 5px;
+	text-align                 : left;
+	vertical-align             : top;
+}
+
+div.form_edit table.embedded_form
+{
+}
+
+
+div.form_edit table.form td.field input,select,textarea
+{
+	border                     : 1px solid #B2C2DF;
+	font-size                  : 11px;;
+}
+
+
+div.form_edit .required
+{
+  color                      : #FF0000;
+  font-weight                : bold;
+}
+
+div.form_edit .warning
+{
+	padding                    : 10px 0 0 60px;
+	text-align                 : left;
+}

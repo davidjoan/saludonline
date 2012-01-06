@@ -1,0 +1,142 @@
+Hospital:
+  Hospital_101:
+    code:                    'CI'
+    name:                    'CLINICA INTERNACIONAL'
+    type:                    1
+  Hospital_102:
+    code:                    'RO'
+    name:                    'ROMIDENT'    
+    type:                    2  
+  Hospital_1:	
+    code:    'JV'
+    name:    EsSalud - Hospital Nivel I Jorge Voto Bernales Corpancho
+    address: Km. 3 1/2 Carretera Central - SANTA ANITA
+    phone:   354-4747
+    type:    3
+  Hospital_2:	
+    code:    'UR'
+    name:    EsSalud - Hospital Nivel I Uldarico Rocca Fernández
+    address: Av. Separadora Industrial y Av. César Vallejo - VILLA EL SALVADOR
+    phone:   287-5266
+    type:    3
+
+  Hospital_3:	
+    code:    'CA'    
+    name:    EsSalud - Hospital Nivel I Carlos Alcántara Butterfield
+    address: Esquina Av. Los Constructores y Calle Copérnico, Urb. COVIMA - LA MOLINA
+    phone:   349-2288
+    type:    3
+  Hospital_4:	
+    code:    'AD'    
+    name:    EsSalud - Hospital Nivel I Aurelio Díaz-Ufano
+    address: Río Majes S/N, cuadra 37 Av. Próceres de la Independencia - S.J.L.
+    phone:   459-4853
+    type:    3    
+  Hospital_5:	
+    code:    'MM'    
+    name:    EsSalud - Hospital Nivel I Marino Molina Scippa (Comas )
+    address: Av. Guillermo de la Fuente con Jr. Vicente Morales - COMAS
+    phone:   537-4463
+    type:    3
+  Hospital_6:	
+    code:    'AN'    
+    name:    EsSalud - Hospital Nivel II Angamos
+    address: Av. Angamos Este 261 - MIRAFLORES
+    phone:   241-2154
+    type:    3    
+  Hospital_7:	
+    code:    'VI'    
+    name:    EsSalud - Hospital Nivel II Vitarte
+    address: Av. Santa María S/N, Km. 6.5 Carretera Central - ATE
+    phone:   494-2973
+    type:    3	
+  Hospital_8:	
+    code:    'GR'    
+    name:    EsSalud - Hospital Nivel III Emergencias Grau
+    address: Av. Grau 351, Cercado - LIMA
+    phone:   428-6190
+    type:    3    
+  Hospital_9:	
+    code:    'AL'    
+    name:    EsSalud - Hospital Nivel IV Guillermo Almenara Irigoyen
+    address: Av. Grau 800 - LA VICTORIA
+    phone:   324-2983
+    type:    3    
+  Hospital_10:	
+    code:    'RE'    
+    name:    EsSalud - Hospital Nivel IV Edgardo Rebagliati Martins
+    address: Av. Edgardo Rebagliati Martins S/N - JESUS MARIA
+    phone:   265-4901
+    type:    3    
+  Hospital_11:	
+    code:    'DO'    
+    name:    EsSalud - Hna. María Donrose Sutmöller / Ventanilla
+    address: Es. Av. G. Ganoza Psje. VI y la Calle 123 - Urb. A.M. De Cáceres - VENTANILLA
+    phone:   553-3921
+    type:    3    
+  Hospital_12:	
+    code:    'SA'    
+    name:    EsSalud - Hospital Alberto Sabogal Sologuren
+    address: Calle Colina 1081 - Bellavista - CALLAO
+    phone:   429-7744
+    type:    3    
+  Hospital_13:	
+    code:    'JA'    
+    name:    Hospital Chosica Materno Infantil José Agurto Tello
+    address: Arequipa 218 - CHOSICA
+    phone:   361-0416
+    type:    3     
+  Hospital_14:	
+    code:    'CU'    
+    name:    Hospital de Emergencias José Casimiro Ulloa
+    address: Av. República de Panamá 6355 - MIRAFLORES
+    phone:   241-2789
+    type:    3         
+  Hospital_15:	
+    code:    'HV'    
+    name:    Hospital Hermilio Valdizán
+    address: Carretera Central Km. 3.5 - SANTA ANITA
+    phone:   494-2410
+    type:    3         
+  Hospital_16:	
+    code:    'LH'    
+    name:    Hospital Local de Huaycán
+    address: Av. José Carlos Mariátegui Zona B - ATE VITARTE
+    phone:   371-6797
+    type:    3
+  Hospital_17:	
+    code:    'LV'    
+    name:    Hospital Local de Vitarte
+    address: Carretera Central Km. 7.5 - ATE VITARTE
+    phone:   351-4484
+    type:    3         	
+  Hospital_18:	
+    code:    'SB'    
+    name:    Hospital Nacional Docente Madre Niño San Bartolomé
+    address: Av. Alfonso Ugarte 825 - LIMA
+    phone:   330-3521
+    type:    3
+  Hospital_19:	
+    code:    'DM'    
+    name:    Hospital Nacional Dos de Mayo
+    address: Av. Grau Cdra. 13 Parque Historia de la Medicina Peruana - Barrios Altos - LIMA
+    phone:    328-0028
+    type: 3    
+  Hospital_20:	
+    code:    'HU'    
+    name:    Hospital Nacional Hipólito Unanue
+    address: Av. César Vallejo 1309 - EL AGUSTINO
+    phone:   362-7777
+    type:    3    
+  Hospital_21:	
+    code:    'PP'    
+    name:    Hospital Puente Piedra
+    address: Av. Sáenz Peña Cdra. 6 s/n - PUENTE PIEDRA
+    phone:   548-1989
+    type:    3
+  Hospital_22:	
+    code:    'MA'    
+    name:    Hospital San Juan de Matucana
+    address: Av. La Florida 144 - MATUCANA
+    phone:   244-3003
+    type:    3         

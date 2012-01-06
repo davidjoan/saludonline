@@ -1,0 +1,32 @@
+Resource:
+  tableName:                 t_resource
+  actAs:
+    SluggableExt:            { fields: [ name ] }
+    Timestampable:
+    Thumbnailable:
+  columns:
+    id:                      { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    name:                    { type: string   , length: 100                   , notnull: true                                                        }
+    path:                    { type: string   , length: 255                   , notnull: true                                                        }
+    size:                    { type: integer  , length: 10                    , notnull: true , default: 0                                           }
+    full_mime:               { type: string   , length: 100                   , notnull: true                                                        }
+    rank:                    { type: integer  , length: 5                     , notnull: true , default: 0                                           }
+  indexes:
+    i_name:                  { fields: [ name ]                                                                                                      }
+  relations:
+    Patient:                 { class: Patient    , local: resource_id      , foreign: patient_id      , alias: Patients  , refClass: ResourcePatient }    
+  options:
+    symfony:                 { filter: false, form: true }
+  
+ResourcePatient:
+  tableName:                 t_resource_patient
+  actAs:
+    Timestampable:           { updated: { disabled: true } }
+  columns:
+    resource_id:             { type: integer  , length: 20 , primary: true                                                                           }
+    patient_id:              { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Resource:                { class: Resource       , local: resource_id , foreign: id, type: one , alias: Resource , onDelete: CASCADE , onUpdate: CASCADE }
+    Patient:                 { class: Patient        , local: patient_id  , foreign: id, type: one , alias: Patient  , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                 { filter: false, form: false }    

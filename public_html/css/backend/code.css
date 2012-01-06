@@ -1,0 +1,30 @@
+pre
+{
+    background-color           : #000000;
+    color                      : #FFFFFF;
+    font-size                  : 14px;
+    line-height                : 1.3em;
+    margin                     : 1em 0;
+    overflow                   : auto;
+    padding                    : 0.7em 0.7em 0;
+}
+ 
+.php .imp {font-weight: bold; color: red}
+.php .st_h {color: #56DB3A}
+.php .kw1 {color: #FF8400}
+.php .kw2 {color: #FFFFFF}
+.php .kw3 {color: #E2392D}
+.php .kw4 {color: #1299DA}
+.php .sy0 {color: #E0882F}
+.php .co1 {color: #B729D9; font-style: italic}
+.php .co2 {color: #BD48B3; font-style: italic}
+.php .co4 {color: #ccc; font-style: italic}
+.php .coMULTI {color: #BD48B3; font-style: italic}
+.php .es0 {color: #ddd}
+.php .br0 {color: #fff}
+.php .st0 {color: #99FF00}
+.php .nu0 {color: #1299DA}
+.php .me1 {color: #FFFFFF}
+.php .me2 {color: #FFFFFF}
+.php .re0 {color: #FFFFFF}
+.php a {text-decoration: none}

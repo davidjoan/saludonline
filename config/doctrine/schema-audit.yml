@@ -1,0 +1,15 @@
+Visit:
+  tableName:                           t_visit
+  actAs:
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    remote_address:                    { type: string   , length: 50                    , notnull: true                                                        }
+    remote_port:                       { type: string   , length: 50                    , notnull: true                                                        }
+    http_user_agent:                   { type: string   , length: 255                   , notnull: true                                                        }
+    datetime:                          { type: datetime                                 , notnull: true                                                        }
+  indexes:
+    i_remote_address:                  { fields: [ remote_address ]                                                                                            }
+    i_datetime:                        { fields: [ datetime ]                                                                                                  }
+  options:
+    symfony:                           { filter: false, form: false }

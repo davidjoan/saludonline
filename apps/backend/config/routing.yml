@@ -1,0 +1,252 @@
+###########################
+########## Treatment ######
+###########################
+treatment_load_hospital:
+  url:             /tratamiento/carga_de_hospitales
+  param:           { module: Treatment, action: loadHospitals, secure: false }
+  
+
+treatment_load_doctor:
+  url:             /tratamiento/carga_de_doctores
+  param:           { module: Treatment, action: loadDoctors, secure: false }
+  
+treatment_load_diagnosis:
+  url:             /tratamiento/carga_de_diagnosticos
+  param:           { module: Treatment, action: loadDiagnosis, secure: false }  
+  
+#treatment
+treatment_list:
+  url:             /treatment/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Treatment, action: list, filter_by: id, filter: 0, order_by: id, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+treatment_new:
+  url:             /treatment/new
+  param:           { module: Treatment, action: edit }
+
+treatment_edit:
+  url:             /treatment/edit/:slug
+  param:           { module: Treatment, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+treatment_delete:
+  url:             /treatment/delete/:slug
+  param:           { module: Treatment, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+###########################
+########## Specialty ######
+###########################
+
+#specialty
+specialty_list:
+  url:             /specialty/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Specialty, action: list, filter_by: name, filter: 0, order_by: name, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+specialty_new:
+  url:             /specialty/new
+  param:           { module: Specialty, action: edit }
+
+specialty_edit:
+  url:             /specialty/edit/:slug
+  param:           { module: Specialty, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+specialty_delete:
+  url:             /specialty/delete/:slug
+  param:           { module: Specialty, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+  
+
+###########################
+########## Patient ########
+###########################
+
+#patient
+patient_list:
+  url:             /patient/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Patient, action: list, filter_by: realname, filter: 0, order_by: realname, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+patient_new:
+  url:             /patient/new
+  param:           { module: Patient, action: edit }
+
+patient_edit:
+  url:             /patient/edit/:slug
+  param:           { module: Patient, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+patient_delete:
+  url:             /patient/delete/:slug
+  param:           { module: Patient, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+  
+  
+###########################
+########## Company ########
+###########################
+
+#company
+company_list:
+  url:             /company/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Company, action: list, filter_by: name, filter: 0, order_by: name, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+company_new:
+  url:             /company/new
+  param:           { module: Company, action: edit }
+
+company_edit:
+  url:             /company/edit/:slug
+  param:           { module: Company, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+company_delete:
+  url:             /company/delete/:slug
+  param:           { module: Company, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+
+############################
+########## Category ########
+############################
+
+#category
+category_list:
+  url:             /category/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Category, action: list, filter_by: name, filter: 0, order_by: name, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+category_new:
+  url:             /category/new
+  param:           { module: Category, action: edit }
+
+category_edit:
+  url:             /category/edit/:slug
+  param:           { module: Category, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+category_delete:
+  url:             /category/delete/:slug
+  param:           { module: Category, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+############################
+########## Sponsor #########
+############################
+
+#Sponsor
+sponsor_list:
+  url:             /sponsor/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Sponsor, action: list, filter_by: name, filter: 0, order_by: name, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+sponsor_new:
+  url:             /sponsor/new
+  param:           { module: Sponsor, action: edit }
+
+sponsor_edit:
+  url:             /sponsor/edit/:slug
+  param:           { module: Sponsor, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+sponsor_delete:
+  url:             /sponsor/delete/:slug
+  param:           { module: Sponsor, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+
+
+###########################
+######### Log #############
+###########################
+
+#Log
+log_login:
+  url:             /
+  param:           { module: Log, action: login }
+  
+log_logout:
+  url:             /logout
+  param:           { module: Log, action: logout }
+
+###########################
+######### General #########
+###########################
+
+#default
+default_disabled:
+  url:             /default/disabled
+  param:           { module: default, action: disabled }
+
+default_error404:
+  url:             /default/error404
+  param:           { module: default, action: error404 }
+
+default_login:
+  url:             /default/login
+  param:           { module: default, action: login }
+
+default_secure:
+  url:             /default/secure
+  param:           { module: default, action: secure }
+
+#Error
+error_delete_error:
+  url:             /error/delete_error
+  param:           { module: Error, action: deleteError }
+
+#Generic
+generic_get_attribute_value:
+  url:             /generic/get_attribute_value
+  param:           { module: Generic, action: getAttributeValue }
+
+generic_add_dynamic_form:
+  url:             /generic/add_dynamic_form
+  param:           { module: Generic, action: addDynamicForm }
+
+generic_remove_dynamic_form:
+  url:             /generic/remove_dynamic_form
+  param:           { module: Generic, action: removeDynamicForm }
+
+#Home
+home:
+  url:             /home
+  param:           { module: Home, action: show }
+
+############################
+########## Post ############
+############################
+
+#Post
+post_list:
+  url:             /post/list/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Post, action: list, filter_by: title, filter: 0, order_by: datetime, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+post_new:
+  url:             /post/new
+  param:           { module: Post, action: edit }
+
+post_edit:
+  url:             /post/edit/:slug
+  param:           { module: Post, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+post_delete:
+  url:             /post/delete/:slug
+  param:           { module: Post, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+##############################
+######### Zefault ############
+##############################
+
+homepage:
+  url:             /
+  param:           { module: Log, action: login }
+
+default:
+  url:             /:module/:action/*

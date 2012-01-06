@@ -1,0 +1,13 @@
+all:
+  contact_form:
+    email:        dtataje@saludonline.org
+    error:        Hay un error. No puede ser enviado!
+    notice:       Tu mensaje ha sido enviado con &eacute;xito.
+    captcha:      Su c&oacute;digo secreto es incorrecto.
+  register_form:
+    email:        dtataje@saludonline.org
+    error:        Hay un error. No puede ser enviado!
+    notice:       por registrartes, recibiras un correo con la confirmaci贸n.
+    captcha:      Su c&oacute;digo secreto es incorrecto.    
+  sfAntiBruteForcePlugin:
+    threshold:        20

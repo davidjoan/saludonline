@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+/* *************************** sfWidgetFormJQueryCompleterDoubleList ********************************** */
+
+div.autocompleter_list_label
+{
+	font-weight                : bold;
+	margin-bottom              : 5px;
+	text-align                 : center;
+}

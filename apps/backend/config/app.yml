@@ -1,0 +1,5 @@
+all:
+  sfImageTransformPlugin:
+    mime_type:
+      auto_detect: true
+      library:     gd_mime_type

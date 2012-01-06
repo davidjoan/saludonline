@@ -1,0 +1,207 @@
+@CHARSET "UTF-8";
+/* ***************************************** Crud ************************************************ */
+
+/**************************** List **********************************/
+
+div.crud_list
+{
+}
+
+div.crud_list table.search
+{
+	color                      : #666666;
+	font-weight                : bold;
+	margin                     : 10px 10px 10px 10px;
+	width                      : auto;
+}
+
+div.crud_list table.search td
+{
+	font-size                  : 11px;
+	padding                    : 2px;
+}
+
+div.crud_list table.alphabet span
+{
+  color                      : #2B7DC7;
+}
+
+
+div.crud_list table.buttons_container
+{
+	background-color           : #2B7DC7;
+	text-align                 : right;
+	width                      : 100%;
+}
+
+div.crud_list table.buttons
+{
+	width                      : auto;
+}
+
+div.crud_list table.buttons td
+{
+	padding                    : 6px;
+}
+
+
+div.crud_list th.column_title
+{
+	background-color           : #AFC0DE;
+	font-size                  : 11px;
+	font-weight                : bold;
+	height                     : 25px;
+}
+
+div.crud_list th.column_title a
+{
+	font-weight                : bold;
+	text-decoration            : none;
+}
+
+
+div.crud_list table.list tr.normal_row
+{
+	color                      : #666666;
+	font-size                  : 11px;
+	height                     : 28px;
+	line-height                : 12px;
+}
+
+div.crud_list table.list tr.empty_row
+{
+	height                     : 25px;
+}
+
+div.crud_list table.list td
+{
+	border-bottom              : 1px solid #939FC2;
+	padding                    : 6px 3px 6px 3px;
+}
+
+div.crud_list table.list td a
+{
+	font-weight                : bold;
+}
+
+
+div.crud_list ul.sort_list li
+{
+	list-style-type            : none;
+}
+
+div.crud_list ul.sort_list .sortable
+{
+  cursor                     : pointer;
+}
+
+
+
+
+/**************************** Edit **********************************/
+
+div.crud_edit
+{
+}
+
+div.crud_edit table.buttons_container
+{
+  background-color           : #9FBFE3;
+	margin                     : 0 0 0 6px;
+  width                      : 98%;
+}
+
+div.crud_edit table.buttons
+{
+  width                      : auto;
+}
+
+div.crud_edit table.buttons td
+{
+  padding                    : 6px;
+}
+
+
+div.crud_edit table.form
+{
+	border-collapse            : collapse;
+	border-spacing             : 0;
+	margin                     : 5px 0 5px 5px;
+	width                      : 98%;
+}
+
+div.crud_edit table.form td.error
+{
+  color                      : #FF0000;
+  font-size                  : 11px;
+  font-weight                : bold;
+  padding                    : 8px 0 8px 200px; /* IE BUG: padding-left: 20% */
+}
+
+div.crud_edit table.form ul.error_list li
+{
+  padding                    : 1px 0 1px 0;
+}
+
+div.crud_edit table.form th.title
+{
+	background-color           : #CED4DD;
+	border-bottom              : 5px solid #FFFFFF;
+	color                      : #000000;
+	cursor                     : pointer;
+	font-size                  : 11px;
+	font-weight                : bold;
+	padding                    : 5px;
+	text-align                 : left;
+}
+
+div.crud_edit table.form td.label
+{
+	background-color           : #EEF2F8;
+	border                     : 1px solid #FFFFFF;
+	border-left                : 20px solid #FFFFFF;
+	color                      : #000000;
+	font-size                  : 11px;
+	font-weight                : bold;
+	padding                    : 5px 10px 5px 5px;
+	text-align                 : right;
+	vertical-align             : top;
+	width                      : 30%;
+}
+
+div.crud_edit table.form td.field
+{
+	color                      : #000000;
+	font-size                  : 11px;
+	font-weight                : normal;
+	padding                    : 5px;
+	text-align                 : left;
+	vertical-align             : top;
+}
+
+div.crud_edit table.embedded_form
+{
+	border-collapse            : collapse;
+	border-spacing             : 0;
+	margin                     : 10px 5px 10px 5px;
+	width                      : 99%;
+}
+
+
+div.crud_edit table.form td.field input,select,textarea
+{
+	border                     : 1px solid #B2C2DF;
+  font-size                  : 11px;
+}
+
+
+div.crud_edit .required
+{
+  color                      : #FF0000;
+	font-weight                : bold;
+}
+
+div.crud_edit .warning
+{
+	margin                     : 5px 0 5px 10px;
+}

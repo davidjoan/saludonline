@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+/* *************************** sfWidgetFormJQueryCompleterList ********************************** */
+
+div.sfWidgetFormJQueryCompleterList
+{
+  background-color           : #FFFFFF;
+  border                     : 1px solid #E4D2C2;
+  height                     : 90px;
+  margin-top                 : 5px;
+  overflow-y                 : scroll;
+  padding                    : 4px;
+  width                      : 200px;
+}
+
+div.sfWidgetFormJQueryCompleterList .hover
+{
+  background-color           : #E4D2C2;
+  cursor                     : pointer;
+}
+
+div.sfWidgetFormJQueryCompleterList .selected
+{
+  background                 : #E8E8FF url(../../images/general/icons/check.png) no-repeat scroll top right;
+  font-weight                : bold;
+}
+
+div.sfWidgetFormJQueryCompleterList div.option
+{
+  padding                    : 3px;
+}

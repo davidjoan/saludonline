@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="lib/i18n"/>
+	<buildpathentry kind="src" path="lib/util"/>
+	<buildpathentry kind="src" path="lib/vendor/symfony"/>
+	<buildpathentry kind="src" path="lib/vendor/geshi"/>
+	<buildpathentry kind="src" path="lib/filter"/>
+	<buildpathentry kind="src" path="lib/model"/>
+	<buildpathentry kind="src" path="lib/validator"/>
+	<buildpathentry kind="src" path="plugins/symfextPlugin"/>
+	<buildpathentry kind="src" path="plugins/sfImageTransformPlugin"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="lib/controller"/>
+	<buildpathentry kind="src" path="lib/lib"/>
+	<buildpathentry kind="src" path="lib/doctrine"/>
+	<buildpathentry kind="src" path="lib/vendor/fpdf"/>
+	<buildpathentry kind="src" path="lib/form"/>
+	<buildpathentry kind="src" path="lib/actions"/>
+	<buildpathentry kind="src" path="plugins/sfFeed2Plugin"/>
+	<buildpathentry kind="src" path="lib/user"/>
+	<buildpathentry excluding="geshi/|symfony/|fpdf/" kind="src" path="lib/vendor"/>
+</buildpath>

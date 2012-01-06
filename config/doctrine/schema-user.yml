@@ -1,0 +1,29 @@
+User:
+  tableName:                           t_user
+  actAs:
+    SluggableExt:                      { fields: [ username ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    realname:                          { type: string   , length: 200                   , notnull: true                                                        } 
+    username:                          { type: string   , length: 50                    , notnull: true                                                        }
+    password:                          { type: string   , length: 255                   , notnull: true                                                        }
+    email:                             { type: string   , length: 100                   , notnull: true                                                        }
+    url:                               { type: string   , length: 255                                                                                          }
+    twitter_username:                  { type: string   , length: 100                                                                                          }
+    phone:                             { type: string   , length: 100                                                                                          }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                           }
+    last_access_at:                    { type: timestamp                                                                                                       }
+  indexes:
+    i_username:                        { fields: [ username ]                                                                                                  }
+    u_email:                           { fields: [ email ]                              , type: unique                                                         }
+    i_url:                             { fields: [ url ]                                                                                                       }
+    i_twitter_username:                { fields: [ twitter_username ]                                                                                          }
+    i_active:                          { fields: [ active ]                                                                                                    }
+  relations:
+    Post:                              { class: Post    , local: id                     , foreign: user_id, type: many, alias: Posts                           }
+    Comment:                           { class: Comment , local: id                     , foreign: user_id, type: many, alias: Comments                        }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]
+    

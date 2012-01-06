@@ -1,0 +1,23 @@
+Company:
+  tableName:                           t_company
+  actAs:
+    Timestampable:
+    SluggableExt: { fields: [name]}
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    name:                              { type: string   , length: 200                   , notnull: false                                                       }
+    description:                       { type: string   , length: 5000                   , notnull: false                                                      }
+    address:                           { type: string   , length: 200                   , notnull: true                                                        }
+    phones:                            { type: string   , length: 200                   , notnull: true                                                        }
+    fax:                               { type: string   , length: 200                   , notnull: false                                                       }
+    mobile_phone:                      { type: string   , length: 200                   , notnull: false                                                       }
+    mail:                              { type: string   , length: 200                   , notnull: false                                                       }
+    box:                               { type: string   , length: 200                   , notnull: false                                                       }
+    image:                             { type: string   , length: 200                   , notnull: false                                                       }    
+    message:                           { type: string   , length: 5000                                                                                         }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                           } 
+  indexes:
+    i_active:                          { fields: [ active ]                                                                                                    }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]  

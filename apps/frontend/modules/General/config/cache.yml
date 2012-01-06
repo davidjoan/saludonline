@@ -1,0 +1,9 @@
+_sidebar:
+  enabled: false
+  contextual: false
+_header:
+  enabled: true  
+  contextual: true
+_footer:
+  enabled: true  
+  contextual: false  

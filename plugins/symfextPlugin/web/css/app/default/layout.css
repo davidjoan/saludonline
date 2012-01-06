@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+/* ******************************************** Layout ****************************************** */
+
+/****************************** Tags ***************************************/
+
+body
+{
+	background-color           : #C5DBED;
+	color                      : #246188;
+	font-family                : Trebuchet MS,Geneva,Arial,Helvetica,sans-serif;
+	text-align                 : center;
+}
+
+a
+{
+  color                      : #FFFFFF;
+  font-size                  : 16px; 
+  text-decoration            : underline;
+}
+
+a:hover
+{
+  color                      : #246188;
+  text-decoration            : none;
+}
+
+h1
+{
+	padding                    : 15px;
+	font-size                  : 33px;
+}
+
+h5
+{
+	padding                    : 0 0 15px 0;
+}
+
+
+
+/**************************** Main ***********************************/
+
+.wrap
+{
+  margin                     : 0 auto;
+}
+
+.header
+{
+	background-color           : #126188;
+	color                      : #FFFFFF;
+	font-size                  : 36px;
+	height                     : 150px;
+}
+
+.content
+{
+	padding                    : 20px 0 0 0;
+	font-size                  : 16px;
+}
+
+.footer
+{
+	font-size                  : 10px;
+	margin                     : 100px 0 0 0;
+	text-align                 : center;
+}
