@@ -1,0 +1,6 @@
+[symfony]
+    git=https://github.com/vjousse/symfony-1.4.git
+	target=lib/vendor/symfony
+[sfBehatPlugin]
+    git=https://github.com/Behat/sfBehatPlugin.git
+	target=plugins/sfBehatPlugin
