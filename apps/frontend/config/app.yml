@@ -1,4 +1,5 @@
 all:
+  web_service_token: Whex1dfqat$$fB2537hyhdtm
   contact_form:
     email:        dtataje@saludonline.org
     error:        Hay un error. No puede ser enviado!

@@ -18,6 +18,16 @@ class Patient extends BasePatient
       $this->_set('password', Cipher::getInstance()->encrypt($password));
       
   }
+  
+  public function asArray()
+  {
+  	return array(
+        'realname'   => $this->getRealname(),
+        'username'   => $this->getUsername(),
+        'email'      => $this->getEmail()
+  	);
+  }
+    
   public function calculaProgreso()
   {
       $puntaje = 1;

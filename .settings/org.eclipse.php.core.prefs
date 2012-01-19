@@ -1,5 +1,5 @@
-#Wed Jan 18 11:39:01 COT 2012
+#Wed Jan 18 16:06:04 COT 2012
 eclipse.preferences.version=1
-include_path=0;/saludonline
+include_path=0;/saludonline\u00050;/saludonline/plugins\u00050;/saludonline/lib
 phpVersion=php5
 use_asp_tags_as_php=false

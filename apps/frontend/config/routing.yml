@@ -1,7 +1,14 @@
+api_login:
+  url:     /api/:token/:username/:password.:sf_format
+  class:   sfDoctrineRoute
+  param:   { module: Api, action: login }
+  options: { model: Patient, type: object, method: getForToken }
+  requirements:
+    sf_format: (?:xml|json)
+
 #######################
 ######### Resource ####
 #######################
-
 
 resource_show:
   url:             /ver/recurso
