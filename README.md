@@ -1,6 +1,7 @@
 Salud Online
 ============
-[![Build Status](https://travis-ci.org/davidjoan/saludonline.svg)](https://travis-ci.org/davidjoan/saludonline)
+[![Build Status](https://travis-ci.org/davidjoan/saludonline.svg)]
+(https://travis-ci.org/davidjoan/saludonline)
 
 Introduction
 ------------
