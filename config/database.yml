@@ -1,0 +1,9 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=saludonline
+      username: root
+      password: '1234'
+      attributes:
+        use_dql_callbacks: true      	  
