@@ -22,10 +22,4 @@ with('response')->isStatusCode(404)->
 info('3 - The web service supports the JSON format')->
 get('/api/Whex1dfqat$$fB2537hyhdtm/davidjoan/jasmin1.json')->
 with('request')->isFormat('json')->
-with('response')->matches('/"username"\: "davidjoan"/')->
-
-info('4 - Find and Exist')->
-get('/api/Whex1dfqat$$fB2537hyhdtm/davidjoan/jasmin1.json')->
-with('response')->isStatusCode(200)->
-end()
-;
+with('response')->matches('/"username"\: "davidjoan"/');
