@@ -16,7 +16,7 @@ env:
 before_script:
   - git submodule init
   - git submodule update
-  - sh -c "php symfony doctrine:build --all --and-load --no-confirmation"
+  - sh -c "php symfony doctrine:build --model --forms --no-confirmation"
 
 
 # omitting "script:" will default to phpunit
