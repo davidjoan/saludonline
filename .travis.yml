@@ -23,7 +23,7 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 #script: phpunit --configuration phpunit_$DB.xml --coverage-text
 #script: php symfony test:functional backend TeamActions
-script: php symfony test:functional frontend ApiActions
+#script: php symfony test:functional frontend ApiActions
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
