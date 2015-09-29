@@ -33,15 +33,15 @@ class Patient extends BasePatient
       $puntaje = 1;
       if($this->getUrl() <> '' )
       {
-        $puntaje+=1;        
+        $puntaje+=5;
       }
       if($this->getTwitterUsername() <> '' )
       {
-        $puntaje+=1;        
+        $puntaje+=5;
       }      
       if($this->getPhone() <> '' )
       {
-        $puntaje+=1;        
+        $puntaje+=5;
       }          
       if($this->getContacts()->count() > 0 )
       {
@@ -55,7 +55,7 @@ class Patient extends BasePatient
       {
           foreach($this->getProfiles() as $profile)
           {
-            $puntaje+=1;    
+            $puntaje+=5;
             if($profile->getWeights()->count() > 0 )
             {
               $puntaje+=3;        
@@ -70,27 +70,27 @@ class Patient extends BasePatient
             }  
             if($profile->getImage() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }
             if($profile->getDateOfBirth() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }   
             if($profile->getBloodType() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }               
             if($profile->getGender() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }            
             if($profile->getMaritalStatus() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }       
             if($profile->getDescription() <> '' )
             { 
-              $puntaje+=1;                
+              $puntaje+=2;
             }                    
           }
       }
