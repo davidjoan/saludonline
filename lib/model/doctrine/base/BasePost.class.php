@@ -82,6 +82,7 @@ abstract class BasePost extends DoctrineRecord
              'type' => 'string',
              'length' => 200,
              'notnull' => true,
+             'default' => '',
              ));
         $this->hasColumn('content', 'string', 20000, array(
              'type' => 'string',
@@ -122,24 +123,6 @@ abstract class BasePost extends DoctrineRecord
               0 => 'title',
              ),
              'type' => 'unique',
-             ));
-        $this->index('i_content', array(
-             'fields' => 
-             array(
-              'content' => 
-              array(
-              'length' => 400,
-              ),
-             ),
-             ));
-        $this->index('i_excerpt', array(
-             'fields' => 
-             array(
-              'excerpt' => 
-              array(
-              'length' => 100,
-              ),
-             ),
              ));
         $this->index('i_datetime', array(
              'fields' => 

@@ -35,7 +35,7 @@
  * @method string              getPhone()            Returns the current record's "phone" value
  * @method string              getActive()           Returns the current record's "active" value
  * @method timestamp           getLastAccessAt()     Returns the current record's "last_access_at" value
- * @method string              getFacebookId()        the current record's "facebook_id" value 
+ * @method string              getFacebookId()       Returns the current record's "facebook_id" value
  * @method Doctrine_Collection getProfiles()         Returns the current record's "Profiles" collection
  * @method Doctrine_Collection getDoctors()          Returns the current record's "Doctors" collection
  * @method Doctrine_Collection getContacts()         Returns the current record's "Contacts" collection
@@ -54,7 +54,7 @@
  * @method Patient             setPhone()            Sets the current record's "phone" value
  * @method Patient             setActive()           Sets the current record's "active" value
  * @method Patient             setLastAccessAt()     Sets the current record's "last_access_at" value
- * @method Patient             setFacebookId()       Sets the current record's "facebook_id" value 
+ * @method Patient             setFacebookId()       Sets the current record's "facebook_id" value
  * @method Patient             setProfiles()         Sets the current record's "Profiles" collection
  * @method Patient             setDoctors()          Sets the current record's "Doctors" collection
  * @method Patient             setContacts()         Sets the current record's "Contacts" collection
@@ -127,6 +127,7 @@ abstract class BasePatient extends DoctrineRecord
              'length' => 20,
              ));
 
+
         $this->index('i_username', array(
              'fields' => 
              array(
@@ -146,7 +147,7 @@ abstract class BasePatient extends DoctrineRecord
               0 => 'facebook_id',
              ),
              'type' => 'unique',
-             ));             
+             ));
         $this->index('i_url', array(
              'fields' => 
              array(

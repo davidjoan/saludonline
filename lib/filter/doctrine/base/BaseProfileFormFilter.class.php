@@ -18,7 +18,7 @@ abstract class BaseProfileFormFilter extends BaseFormFilterDoctrine
       'lastname'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'date_of_birth'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'gender'         => new sfWidgetFormFilterInput(),
-      'image'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'image'          => new sfWidgetFormFilterInput(),
       'description'    => new sfWidgetFormFilterInput(),
       'type'           => new sfWidgetFormFilterInput(),
       'blood_type'     => new sfWidgetFormFilterInput(),
@@ -57,7 +57,11 @@ abstract class BaseProfileFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
-  public function addPatientsListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function add
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /Users/David/Projects/saludonline/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+
+Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /Users/David/Projects/saludonline/lib/vendor/symfony/lib/util/sfToolkit.class.php on line 362
+PatientsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {

@@ -35,7 +35,7 @@ abstract class BasePostForm extends BaseFormDoctrine
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'))),
       'title'            => new sfValidatorString(array('max_length' => 200)),
-      'image'            => new sfValidatorString(array('max_length' => 200)),
+      'image'            => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'content'          => new sfValidatorString(array('max_length' => 20000)),
       'excerpt'          => new sfValidatorString(array('max_length' => 500)),
       'meta_description' => new sfValidatorString(array('max_length' => 5000)),

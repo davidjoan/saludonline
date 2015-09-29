@@ -54,23 +54,6 @@ abstract class BasePostIndex extends DoctrineRecord
              'notnull' => true,
              ));
 
-
-        $this->index('u_title', array(
-             'fields' => 
-             array(
-              0 => 'title',
-             ),
-             'type' => 'unique',
-             ));
-        $this->index('i_content', array(
-             'fields' => 
-             array(
-              'content' => 
-              array(
-              'length' => 400,
-              ),
-             ),
-             ));
         $this->option('symfony', array(
              'filter' => false,
              'form' => false,

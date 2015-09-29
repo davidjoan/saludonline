@@ -27,4 +27,4 @@ script: php symfony test:functional frontend ApiActions
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  email: "dtataje@datasolutions.pe"
+  email: "davidtataje@gmail.com"

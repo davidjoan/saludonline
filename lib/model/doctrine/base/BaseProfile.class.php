@@ -100,7 +100,8 @@ abstract class BaseProfile extends DoctrineRecord
         $this->hasColumn('image', 'string', 105, array(
              'type' => 'string',
              'length' => 105,
-             'notnull' => true,
+             'notnull' => false,
+             'default' => '',
              ));
         $this->hasColumn('description', 'string', 5000, array(
              'type' => 'string',

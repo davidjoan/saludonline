@@ -40,7 +40,7 @@ abstract class BaseProfileForm extends BaseFormDoctrine
       'lastname'       => new sfValidatorString(array('max_length' => 100)),
       'date_of_birth'  => new sfValidatorDate(array('required' => false)),
       'gender'         => new sfValidatorString(array('max_length' => 1, 'required' => false)),
-      'image'          => new sfValidatorString(array('max_length' => 105)),
+      'image'          => new sfValidatorString(array('max_length' => 105, 'required' => false)),
       'description'    => new sfValidatorString(array('max_length' => 5000, 'required' => false)),
       'type'           => new sfValidatorString(array('max_length' => 1, 'required' => false)),
       'blood_type'     => new sfValidatorString(array('max_length' => 1, 'required' => false)),

@@ -150,15 +150,6 @@ abstract class BaseComment extends DoctrineRecord
               0 => 'author_ip',
              ),
              ));
-        $this->index('i_content', array(
-             'fields' => 
-             array(
-              'content' => 
-              array(
-              'length' => 200,
-              ),
-             ),
-             ));
         $this->index('i_datetime', array(
              'fields' => 
              array(

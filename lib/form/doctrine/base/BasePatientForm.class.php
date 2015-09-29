@@ -25,6 +25,7 @@ abstract class BasePatientForm extends BaseFormDoctrine
       'phone'            => new sfWidgetFormInputText(),
       'active'           => new sfWidgetFormInputText(),
       'last_access_at'   => new sfWidgetFormDateTime(),
+      'facebook_id'      => new sfWidgetFormInputText(),
       'slug'             => new sfWidgetFormInputText(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
@@ -45,6 +46,7 @@ abstract class BasePatientForm extends BaseFormDoctrine
       'phone'            => new sfValidatorString(array('max_length' => 100, 'required' => false)),
       'active'           => new sfValidatorString(array('max_length' => 1, 'required' => false)),
       'last_access_at'   => new sfValidatorDateTime(array('required' => false)),
+      'facebook_id'      => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'slug'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
@@ -57,6 +59,7 @@ abstract class BasePatientForm extends BaseFormDoctrine
     $this->validatorSchema->setPostValidator(
       new sfValidatorAnd(array(
         new sfValidatorDoctrineUnique(array('model' => 'Patient', 'column' => array('email'))),
+        new sfValidatorDoctrineUnique(array('model' => 'Patient', 'column' => array('facebook_id'))),
         new sfValidatorDoctrineUnique(array('model' => 'Patient', 'column' => array('slug'))),
       ))
     );

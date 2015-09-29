@@ -144,13 +144,15 @@ class HomeActions extends ActionsProject
              if($this->form->getValue('captcha') == $this->getUser()->getAttribute('security_code')):
                  
              $this->form->save();
+                 /*
              $mensage = Swift_Message::newInstance()
 		  ->setFrom(sfConfig::get('app_contact_form_email'))
                   ->setTo($this->form->getValue('email'))
 		  ->setSubject('Bienvenido a Salud Online, gracias por registrarte')
 		  ->setBody($this->getPartial('register'), 'text/html');
  
-             $this->getMailer()->send($mensage); //enable in production
+             $this->getMailer()->send($mensage);*/
+              //enable in production
 
              $this->getUser()->setFlash('notice', sfConfig::get('app_register_form_notice'));
              $this->redirect('@register');

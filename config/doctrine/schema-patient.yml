@@ -45,7 +45,7 @@ Profile:
     lastname:                { type: string   , length: 100                   , notnull: true                                                       }
     date_of_birth:           { type: date                                                                                                           }
     gender:                  { type: string   , length: 1  , fixed: true                                                                            }
-    image:                   { type: string   , length: 105                   , notnull: true                                                       }
+    image:                   { type: string   , length: 105                   , notnull: false, default: ''                                           }
     description:             { type: string   , length: 5000                                                                                        }
     type:                    { type: string   , length: 1  , fixed: true                                                                            }
     blood_type:              { type: string   , length: 1  , fixed: true                                                                            }

@@ -107,6 +107,7 @@ abstract class BaseCompany extends DoctrineRecord
         $this->hasColumn('message', 'string', 5000, array(
              'type' => 'string',
              'length' => 5000,
+             'notnull' => false,
              ));
         $this->hasColumn('active', 'string', 1, array(
              'type' => 'string',

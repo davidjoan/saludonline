@@ -60,9 +60,9 @@ abstract class BaseDiagnosis extends DoctrineRecord
              'length' => 5,
              'notnull' => true,
              ));
-        $this->hasColumn('name', 'string', 100, array(
+        $this->hasColumn('name', 'string', 500, array(
              'type' => 'string',
-             'length' => 100,
+             'length' => 500,
              'notnull' => true,
              ));
         $this->hasColumn('description', 'string', 5000, array(
@@ -78,12 +78,6 @@ abstract class BaseDiagnosis extends DoctrineRecord
              ));
 
 
-        $this->index('i_name', array(
-             'fields' => 
-             array(
-              0 => 'name',
-             ),
-             ));
         $this->index('u_code', array(
              'fields' => 
              array(
